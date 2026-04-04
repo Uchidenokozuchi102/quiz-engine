@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズアプリ デモ一覧</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #0d0d14;
+            color: #e8e4d9;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #c9a44a, #fff, #e8c162);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #9a9484;
+            font-size: .85rem;
+            margin-bottom: 32px;
+        }
+        .card {
+            background: rgba(18, 16, 24, 0.9);
+            border: 1px solid rgba(201, 164, 74, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: all .3s;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #c9a44a, #8b6914, #e8c162);
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(201, 164, 74, 0.2);
+            border-color: #c9a44a;
+        }
+        .card-icon { font-size: 36px; margin-bottom: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .card-desc { font-size: .85rem; color: #9a9484; line-height: 1.6; }
+        .card-tags { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag {
+            font-size: .72rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(201, 164, 74, 0.1);
+            border: 1px solid rgba(201, 164, 74, 0.2);
+            color: #c9a44a;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #9a9484;
+            font-size: .75rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>テスト対策クイズアプリ</h1>
+        <p class="subtitle">テスト範囲に合わせた専用アプリを制作します</p>
+
+        <a class="card" href="index.html?data=sample-data.json">
+            <div class="card-icon">📝</div>
+            <div class="card-title">中2 学年末英語テスト対策</div>
+            <div class="card-desc">基本13-14 範囲。並び替え・4択・単語入力の3モードで徹底演習。</div>
+            <div class="card-tags">
+                <span class="tag">英語</span>
+                <span class="tag">中学2年</span>
+                <span class="tag">並び替え</span>
+                <span class="tag">4択</span>
+                <span class="tag">単語入力</span>
+            </div>
+        </a>
+
+        <a class="card" href="index.html?data=demo-history.json">
+            <div class="card-icon">🏯</div>
+            <div class="card-title">中2 歴史テスト対策</div>
+            <div class="card-desc">明治維新〜日清・日露戦争。4択クイズと重要用語の入力で定着。</div>
+            <div class="card-tags">
+                <span class="tag">社会（歴史）</span>
+                <span class="tag">中学2年</span>
+                <span class="tag">4択</span>
+                <span class="tag">用語入力</span>
+            </div>
+        </a>
+
+        <div class="footer">
+            テスト範囲のスクリーンショットを送るだけ。<br>
+            あなたの生徒専用のクイズアプリを制作します。
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "title": "中2 学年末英語テスト対策",
+  "subtitle": "基本13-14 範囲",
+  "icon": "📝",
+  "modes": {
+    "rearrange": {
+      "label": "REARRANGE",
+      "icon": "🔀",
+      "description": "並び替え問題 — 単語を正しい順序に並べよう",
+      "questions": [
+        { "jp": "その車は雪でおおわれていました。", "words": ["That", "car", "was", "covered", "with", "snow"], "answer": "That car was covered with snow." },
+        { "jp": "彩はみんなに愛されるでしょう。", "words": ["Aya", "will", "be", "loved", "by", "everyone"], "answer": "Aya will be loved by everyone." },
+        { "jp": "その歌は私に子供のころを思い出させます。", "words": ["That song", "reminds", "me", "of", "my childhood"], "answer": "That song reminds me of my childhood." },
+        { "jp": "この動物園は公園の一部です。", "words": ["This zoo", "is", "a", "part", "of", "the park"], "answer": "This zoo is a part of the park." },
+        { "jp": "英語は多くの国で話されています。", "words": ["English", "is", "spoken", "in", "many", "countries"], "answer": "English is spoken in many countries." },
+        { "jp": "この本は若い人たちに読まれています。", "words": ["This book", "is", "read", "by", "young", "people"], "answer": "This book is read by young people." }
+      ]
+    },
+    "choice": {
+      "label": "4 CHOICES",
+      "icon": "🔢",
+      "description": "4択問題 — 正しい答えを選ぼう",
+      "questions": [
+        { "jp": "Rugby is (　　) in New Zealand.", "hint": "（ ）内の語を適する形にかえなさい。原形: like", "choices": ["liked", "likes", "liking", "like"], "answer": "liked" },
+        { "jp": "Hiroki is (　　) for his beautiful voice.", "hint": "原形: know", "choices": ["known", "knows", "knowing", "knew"], "answer": "known" },
+        { "jp": "This building was (　　) in 2000.", "hint": "原形: build", "choices": ["built", "builds", "building", "builded"], "answer": "built" },
+        { "jp": "A lot of stars are (　　) in this village.", "hint": "原形: see", "choices": ["seen", "sees", "seeing", "saw"], "answer": "seen" },
+        { "jp": "These pictures were (　　) by a famous artist.", "hint": "原形: paint", "choices": ["painted", "paints", "painting", "paint"], "answer": "painted" },
+        { "jp": "The letter was (　　) in English.", "hint": "原形: write", "choices": ["written", "writes", "writing", "wrote"], "answer": "written" },
+        { "jp": "This room is (　　) every day.", "hint": "原形: clean", "choices": ["cleaned", "cleans", "cleaning", "clean"], "answer": "cleaned" },
+        { "jp": "Many trees were (　　) in the park.", "hint": "原形: plant", "choices": ["planted", "plants", "planting", "plant"], "answer": "planted" }
+      ]
+    },
+    "word": {
+      "label": "VOCABULARY",
+      "icon": "🔤",
+      "description": "単語テスト — 英単語を直接入力しよう",
+      "questions": [
+        { "jp": "自然の", "answer": "natural" },
+        { "jp": "(…の)多様性、相違(点)", "answer": "diversity" },
+        { "jp": "…を選ぶ", "answer": "choose" },
+        { "jp": "…を守る、保護する", "answer": "protect" },
+        { "jp": "文化の", "answer": "cultural" },
+        { "jp": "雲", "answer": "cloud" },
+        { "jp": "(文化的な)遺産", "answer": "heritage" },
+        { "jp": "植物", "answer": "plant" },
+        { "jp": "観光客、旅行者", "answer": "tourist" },
+        { "jp": "最近、近ごろ", "answer": "recently" },
+        { "jp": "妻", "answer": "wife" },
+        { "jp": "日の出", "answer": "sunrise" },
+        { "jp": "原料、材料", "answer": "material" },
+        { "jp": "政府", "answer": "government" },
+        { "jp": "伝統", "answer": "tradition" },
+        { "jp": "…を失う", "answer": "lose" },
+        { "jp": "美しさ、美", "answer": "beauty" },
+        { "jp": "突然、急に", "answer": "suddenly" },
+        { "jp": "自由", "answer": "freedom" },
+        { "jp": "惑星", "answer": "planet" }
+      ]
+    }
+  }
+}

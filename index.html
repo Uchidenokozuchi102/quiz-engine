@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            --primary: #c9a44a;
+            --secondary: #8b6914;
+            --accent: #e8c162;
+            --bg-dark: #0d0d14;
+            --bg-card: rgba(18, 16, 24, 0.9);
+            --glass: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(201, 164, 74, 0.15);
+            --success: #5ce89d;
+            --error: #ff5c6e;
+            --text: #e8e4d9;
+            --text-dim: #9a9484;
+        }
+
+        html { font-size: 16px }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100dvh;
+            overflow-x: hidden;
+            overscroll-behavior-y: none;
+            position: relative
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(139, 105, 20, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(201, 164, 74, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(232, 193, 98, 0.06) 0%, transparent 50%);
+            z-index: 0;
+            animation: bgPulse 8s ease-in-out infinite alternate
+        }
+
+        @keyframes bgPulse { 0% { opacity: .7 } 100% { opacity: 1 } }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(201, 164, 74, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 164, 74, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+            height: 100dvh;
+            overflow-y: auto;
+            overscroll-behavior-y: none
+        }
+
+        #startScreen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            gap: 20px
+        }
+
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 40px rgba(201, 164, 74, 0.3), 0 0 80px rgba(139, 105, 20, 0.2);
+            animation: iconFloat 3s ease-in-out infinite
+        }
+
+        @keyframes iconFloat { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            line-height: 1.4
+        }
+
+        .sub-title {
+            font-size: .95rem;
+            color: var(--text-dim);
+            font-weight: 300;
+            margin-top: 4px;
+            letter-spacing: 1px
+        }
+
+        .mode-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px
+        }
+
+        .mode-btn {
+            position: relative;
+            padding: 18px 24px;
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            cursor: pointer;
+            transition: all .3s;
+            overflow: hidden;
+            text-align: left
+        }
+
+        .mode-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity .3s
+        }
+
+        .mode-btn:hover::before, .mode-btn:active::before { opacity: 1 }
+        .mode-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201, 164, 74, 0.15) }
+
+        .mode-btn-icon { font-size: 26px; margin-bottom: 6px }
+        .mode-btn-title { font-family: 'Orbitron', sans-serif; font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 4px }
+        .mode-btn-desc { font-size: .8rem; color: var(--text-dim); font-weight: 300 }
+
+        #quizScreen { display: none }
+
+        .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding: 12px 0 }
+
+        .back-btn {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            color: var(--text);
+            padding: 10px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: .85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all .3s;
+            backdrop-filter: blur(10px)
+        }
+
+        .back-btn:hover { background: rgba(255, 255, 255, 0.08); border-color: var(--primary); color: var(--primary) }
+
+        .mode-label { font-family: 'Orbitron', sans-serif; font-size: .8rem; color: var(--primary); letter-spacing: 2px; text-transform: uppercase }
+
+        .progress-info { font-size: .8rem; color: var(--text-dim); text-align: center; margin-bottom: 8px }
+
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 28px 24px;
+            backdrop-filter: blur(20px);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .question-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) }
+
+        .question-jp { font-size: 1.05rem; font-weight: 500; margin-bottom: 8px; line-height: 1.7; color: #fff }
+
+        .question-hint {
+            font-size: .82rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            padding: 8px 12px;
+            background: rgba(139, 105, 20, 0.08);
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary)
+        }
+
+        /* 並び替え */
+        .answer-slots {
+            display: flex; flex-wrap: wrap; gap: 8px; min-height: 54px; padding: 16px;
+            background: rgba(201, 164, 74, 0.03); border: 2px dashed rgba(201, 164, 74, 0.15);
+            border-radius: 14px; margin-bottom: 16px; align-items: center; transition: border-color .3s
+        }
+        .answer-slots.drag-over { border-color: var(--primary); background: rgba(201, 164, 74, 0.06) }
+        .answer-slots .placeholder-text { color: var(--text-dim); font-size: .82rem; font-style: italic; width: 100%; text-align: center; pointer-events: none }
+
+        .word-pool { display: flex; flex-wrap: wrap; gap: 8px; min-height: 50px; padding: 8px 0; justify-content: center }
+
+        .word-chip {
+            padding: 10px 18px; border-radius: 10px; font-size: .92rem; font-weight: 500;
+            cursor: pointer; user-select: none; transition: all .25s cubic-bezier(.4, 0, .2, 1); font-family: 'Inter', sans-serif
+        }
+        .word-chip.in-pool { background: linear-gradient(135deg, rgba(139, 105, 20, 0.25), rgba(201, 164, 74, 0.1)); border: 1px solid rgba(201, 164, 74, 0.3); color: #fff }
+        .word-chip.in-pool:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(201, 164, 74, 0.3); border-color: var(--primary) }
+        .word-chip.in-pool:active { transform: scale(.95) }
+        .word-chip.in-slot { background: linear-gradient(135deg, rgba(201, 164, 74, 0.2), rgba(232, 193, 98, 0.1)); border: 1px solid rgba(201, 164, 74, 0.3); color: #fff }
+        .word-chip.in-slot:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(232, 193, 98, 0.2) }
+        .word-chip.dragging { opacity: .5; transform: scale(.95) }
+        .period-display { font-size: 1.1rem; font-weight: 700; color: var(--text-dim); padding: 10px 4px; pointer-events: none }
+
+        /* 4択 */
+        .choice-btn {
+            width: 100%; padding: 16px 20px; border: 1px solid var(--glass-border); border-radius: 14px;
+            background: var(--bg-card); backdrop-filter: blur(10px); color: var(--text);
+            font-size: .95rem; font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            cursor: pointer; transition: all .3s; text-align: left; margin-bottom: 10px
+        }
+        .choice-btn:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(201, 164, 74, 0.15); transform: translateY(-1px) }
+        .choice-btn.correct { background: rgba(92, 232, 157, 0.15); border-color: var(--success); color: var(--success) }
+        .choice-btn.incorrect { background: rgba(255, 92, 110, 0.15); border-color: var(--error); color: var(--error) }
+        .choice-btn:disabled { cursor: default; transform: none !important; box-shadow: none !important }
+
+        /* 単語入力 */
+        .word-input {
+            width: 100%; padding: 14px 18px; border: 1px solid var(--glass-border); border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04); color: #fff; font-size: 1rem;
+            font-family: 'Inter', sans-serif; outline: none; transition: border-color .3s
+        }
+        .word-input:focus { border-color: var(--primary); box-shadow: 0 0 16px rgba(201, 164, 74, 0.15) }
+
+        /* ボタン */
+        .action-btn {
+            width: 100%; padding: 16px; border: none; border-radius: 14px; font-size: 1rem; font-weight: 700;
+            cursor: pointer; transition: all .3s; font-family: 'Noto Sans JP', sans-serif;
+            position: relative; overflow: hidden; margin-top: 8px
+        }
+        .btn-check { background: linear-gradient(135deg, var(--secondary), var(--primary)); color: #fff; box-shadow: 0 4px 24px rgba(201, 164, 74, 0.2) }
+        .btn-check:hover { transform: translateY(-1px); box-shadow: 0 6px 32px rgba(201, 164, 74, 0.3) }
+        .btn-check:active { transform: scale(.98) }
+        .btn-next { background: linear-gradient(135deg, var(--accent), var(--secondary)); color: #0d0d14; box-shadow: 0 4px 24px rgba(232, 193, 98, 0.2) }
+        .btn-next:hover { transform: translateY(-1px); box-shadow: 0 6px 32px rgba(232, 193, 98, 0.3) }
+
+        /* オーバーレイ */
+        .overlay { display: none; position: fixed; inset: 0; background: rgba(5, 5, 12, 0.88); backdrop-filter: blur(12px); z-index: 100; align-items: center; justify-content: center; padding: 20px; animation: fadeIn .3s }
+        .overlay.show { display: flex }
+        @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+        .overlay-card {
+            background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 24px;
+            padding: 36px 28px; max-width: 500px; width: 100%; text-align: center;
+            animation: slideUp .4s cubic-bezier(.4, 0, .2, 1); position: relative; overflow: hidden
+        }
+        .overlay-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px }
+        .overlay-card.correct::before { background: linear-gradient(90deg, var(--success), var(--primary)) }
+        .overlay-card.incorrect::before { background: linear-gradient(90deg, var(--error), var(--accent)) }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px) scale(.95) } to { opacity: 1; transform: translateY(0) scale(1) } }
+
+        .result-icon { font-size: 64px; margin-bottom: 12px }
+        .result-label { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 16px }
+        .result-label.correct { color: var(--success) }
+        .result-label.incorrect { color: var(--error) }
+
+        .correct-answer-box { background: rgba(201, 164, 74, 0.06); border: 1px solid rgba(201, 164, 74, 0.15); border-radius: 12px; padding: 16px; margin: 16px 0; text-align: left }
+        .correct-answer-label { font-size: .75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px }
+        .correct-answer-text { font-size: 1rem; color: var(--primary); font-family: 'Inter', sans-serif; font-weight: 600; line-height: 1.6 }
+
+        .overlay-btn { width: 100%; padding: 14px; border: none; border-radius: 12px; font-size: .95rem; font-weight: 700; cursor: pointer; margin-top: 8px; font-family: 'Noto Sans JP', sans-serif; transition: all .3s }
+        .overlay-btn.next { background: linear-gradient(135deg, var(--secondary), var(--primary)); color: #fff }
+        .overlay-btn.next:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(201, 164, 74, 0.3) }
+
+        .particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden }
+        .particle { position: absolute; width: 2px; height: 2px; background: var(--primary); border-radius: 50%; opacity: 0; animation: particleFloat linear infinite }
+        @keyframes particleFloat { 0% { opacity: 0; transform: translateY(100vh) scale(0) } 10% { opacity: .5 } 90% { opacity: .5 } 100% { opacity: 0; transform: translateY(-10vh) scale(1) } }
+
+        ::-webkit-scrollbar { width: 4px }
+        ::-webkit-scrollbar-track { background: transparent }
+        ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 4px }
+
+        .finish-screen { display: none; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; gap: 20px }
+        .finish-screen.show { display: flex }
+        .finish-icon { font-size: 72px; margin-bottom: 8px }
+        .finish-title { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, var(--success), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text }
+        .finish-subtitle { color: var(--text-dim); font-size: .9rem }
+
+        .score-display { font-size: 1.2rem; color: var(--primary); font-weight: 700; margin: 8px 0 }
+
+        /* ローディング */
+        #loadingScreen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 16px }
+        .loading-spinner { width: 48px; height: 48px; border: 3px solid var(--glass-border); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite }
+        @keyframes spin { to { transform: rotate(360deg) } }
+
+        /* エラー */
+        .error-msg { color: var(--error); text-align: center; padding: 20px }
+
+        @media(max-width:480px) {
+            .main-title { font-size: 1.2rem }
+            .question-card { padding: 20px 16px }
+            .word-chip { padding: 8px 14px; font-size: .85rem }
+            .answer-slots { padding: 12px }
+        }
+
+        @media(max-height:700px) {
+            #startScreen { gap: 10px }
+            .logo-icon { width: 64px; height: 64px; font-size: 30px; margin-bottom: 10px; border-radius: 18px }
+            .main-title { font-size: 1.15rem }
+            .sub-title { font-size: .85rem; margin-top: 2px }
+            .mode-buttons { margin-top: 14px; gap: 10px }
+            .mode-btn { padding: 14px 20px }
+            .mode-btn-icon { font-size: 22px; margin-bottom: 4px }
+            .mode-btn-title { font-size: .85rem }
+            .mode-btn-desc { font-size: .75rem }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="container">
+        <div id="loadingScreen">
+            <div class="loading-spinner"></div>
+            <div style="color:var(--text-dim)">読み込み中...</div>
+        </div>
+        <div id="startScreen" style="display:none"></div>
+        <div id="quizScreen">
+            <div class="top-bar">
+                <button class="back-btn" onclick="goHome()">&#8592; ホーム</button>
+                <div class="mode-label" id="modeLabel"></div>
+            </div>
+            <div class="progress-info" id="progressInfo"></div>
+            <div id="questionArea"></div>
+            <div id="actionArea"></div>
+        </div>
+    </div>
+    <div class="overlay" id="resultOverlay">
+        <div class="overlay-card" id="overlayCard">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-label" id="resultLabel"></div>
+            <div class="correct-answer-box" id="correctAnswerBox">
+                <div class="correct-answer-label">正解</div>
+                <div class="correct-answer-text" id="correctAnswerText"></div>
+            </div>
+            <button class="overlay-btn next" onclick="nextQuestion()">次の問題へ &#8594;</button>
+        </div>
+    </div>
+    <script>
+        // ===== 汎用クイズエンジン =====
+        // JSONファイルを差し替えるだけで別教科に対応
+
+        let quizData = null;
+        let currentMode = '', questions = [], currentIndex = 0, score = 0;
+        let draggedEl = null, draggedFromSlot = false;
+
+        // --- データ読み込み ---
+        // data.json のパスは ?data=xxx.json で指定可能（デフォルト: sample-data.json）
+        const params = new URLSearchParams(location.search);
+        const dataFile = params.get('data') || 'sample-data.json';
+
+        fetch(dataFile)
+            .then(r => { if (!r.ok) throw new Error('データファイルが見つかりません: ' + dataFile); return r.json() })
+            .then(data => { quizData = data; initApp() })
+            .catch(err => {
+                document.getElementById('loadingScreen').innerHTML = `<div class="error-msg">読み込みエラー<br><small>${err.message}</small></div>`;
+            });
+
+        function initApp() {
+            document.title = quizData.title || 'Quiz';
+            document.getElementById('loadingScreen').style.display = 'none';
+            const ss = document.getElementById('startScreen');
+            ss.style.display = '';
+
+            let modesHtml = '';
+            for (const [key, mode] of Object.entries(quizData.modes)) {
+                modesHtml += `<button class="mode-btn" onclick="startMode('${key}')">
+                    <div class="mode-btn-icon">${mode.icon || '📝'}</div>
+                    <div class="mode-btn-title">${mode.label}</div>
+                    <div class="mode-btn-desc">${mode.description || ''}</div>
+                </button>`;
+            }
+
+            ss.innerHTML = `<div>
+                <div class="logo-icon">${quizData.icon || '📝'}</div>
+                <h1 class="main-title">${quizData.title || 'QUIZ'}</h1>
+                <p class="sub-title">${quizData.subtitle || ''}</p>
+            </div>
+            <div class="mode-buttons">${modesHtml}</div>`;
+
+            document.getElementById('quizScreen').style.display = 'none';
+        }
+
+        // --- ユーティリティ ---
+        function shuffle(a) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[b[i], b[j]] = [b[j], b[i]] } return b }
+
+        function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
+
+        // --- モード開始 ---
+        function startMode(mode) {
+            currentMode = mode; currentIndex = 0; score = 0;
+            const modeData = quizData.modes[mode];
+            questions = shuffle([...modeData.questions]);
+            document.getElementById('modeLabel').textContent = modeData.label;
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('quizScreen').style.display = 'block';
+            renderQuestion();
+        }
+
+        function goHome() {
+            document.getElementById('startScreen').style.display = '';
+            document.getElementById('quizScreen').style.display = 'none';
+            document.getElementById('questionArea').innerHTML = '';
+            document.getElementById('actionArea').innerHTML = '';
+            document.getElementById('progressInfo').textContent = '';
+        }
+
+        function updateProgress() {
+            document.getElementById('progressInfo').textContent = `${currentIndex + 1} / ${questions.length}`;
+        }
+
+        // --- 問題描画の振り分け ---
+        function renderQuestion() {
+            if (currentIndex >= questions.length) { showFinish(); return }
+            updateProgress();
+            const q = questions[currentIndex];
+
+            // 問題タイプの自動判定: words→並び替え、choices→4択、それ以外→入力式
+            if (q.words) renderRearrange(q);
+            else if (q.choices) renderChoice(q);
+            else renderWord(q);
+        }
+
+        // ===== 並び替え =====
+        function renderRearrange(q) {
+            const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
+            let h = q.hint ? `<div class="question-hint">${escHtml(q.hint)}</div>` : '';
+            const at = q.answer.trim(), lc = at[at.length - 1], p = (lc === '.' || lc === '?' || lc === '!') ? lc : '.';
+            qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}</div>
+  <div class="answer-slots" id="answerSlots"><span class="placeholder-text">ここに単語を並べよう</span><span class="period-display" id="periodDisplay" style="display:none">${p}</span></div>
+  <div class="word-pool" id="wordPool"></div>`;
+            aa.innerHTML = `<button class="action-btn btn-check" onclick="checkRearrange()">回答する</button>`;
+            const pool = document.getElementById('wordPool');
+            shuffle(q.words).forEach(w => { pool.appendChild(createWordChip(w, true)) });
+            setupDropZone();
+        }
+
+        function createWordChip(word, inPool) {
+            const c = document.createElement('div');
+            c.className = `word-chip ${inPool ? 'in-pool' : 'in-slot'}`; c.textContent = word; c.draggable = true; c.dataset.word = word;
+            c.addEventListener('click', () => { c.classList.contains('in-pool') ? moveToSlots(c) : moveToPool(c) });
+            c.addEventListener('dragstart', e => { draggedEl = c; draggedFromSlot = c.classList.contains('in-slot'); c.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', '') });
+            c.addEventListener('dragend', () => { c.classList.remove('dragging'); draggedEl = null; draggedFromSlot = false });
+            let tx, ty, tm;
+            c.addEventListener('touchstart', e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; tm = false }, { passive: true });
+            c.addEventListener('touchmove', e => { if (Math.abs(e.touches[0].clientX - tx) > 10 || Math.abs(e.touches[0].clientY - ty) > 10) tm = true }, { passive: true });
+            c.addEventListener('touchend', e => { if (!tm) { e.preventDefault(); c.classList.contains('in-pool') ? moveToSlots(c) : moveToPool(c) } });
+            return c;
+        }
+
+        function moveToSlots(c) {
+            const s = document.getElementById('answerSlots'), ph = s.querySelector('.placeholder-text'), pd = document.getElementById('periodDisplay');
+            c.classList.remove('in-pool'); c.classList.add('in-slot'); s.insertBefore(c, pd);
+            if (ph) ph.style.display = 'none'; pd.style.display = '';
+        }
+
+        function moveToPool(c) {
+            const pool = document.getElementById('wordPool'), s = document.getElementById('answerSlots');
+            c.classList.remove('in-slot'); c.classList.add('in-pool'); pool.appendChild(c);
+            if (!s.querySelectorAll('.word-chip').length) { const ph = s.querySelector('.placeholder-text'); if (ph) ph.style.display = ''; document.getElementById('periodDisplay').style.display = 'none' }
+        }
+
+        function setupDropZone() {
+            const s = document.getElementById('answerSlots'), pool = document.getElementById('wordPool');
+            s.addEventListener('dragover', e => { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; s.classList.add('drag-over') });
+            s.addEventListener('dragleave', () => s.classList.remove('drag-over'));
+            s.addEventListener('drop', e => {
+                e.preventDefault(); s.classList.remove('drag-over');
+                if (draggedEl) {
+                    const chips = [...s.querySelectorAll('.word-chip:not(.dragging)')], pd = document.getElementById('periodDisplay'); let ib = pd;
+                    for (const ch of chips) { const r = ch.getBoundingClientRect(); if (e.clientX < r.left + r.width / 2) { ib = ch; break } }
+                    draggedEl.classList.remove('in-pool'); draggedEl.classList.add('in-slot'); s.insertBefore(draggedEl, ib);
+                    const ph = s.querySelector('.placeholder-text'); if (ph) ph.style.display = 'none'; pd.style.display = ''
+                }
+            });
+            pool.addEventListener('dragover', e => { e.preventDefault(); e.dataTransfer.dropEffect = 'move' });
+            pool.addEventListener('drop', e => { e.preventDefault(); if (draggedEl && draggedEl.classList.contains('in-slot')) moveToPool(draggedEl) });
+        }
+
+        function checkRearrange() {
+            const chips = document.getElementById('answerSlots').querySelectorAll('.word-chip');
+            if (!chips.length) return;
+            const q = questions[currentIndex], uw = [...chips].map(c => c.dataset.word), at = q.answer.trim(), lc = at[at.length - 1], p = (lc === '.' || lc === '?' || lc === '!') ? lc : '.';
+            let ua = uw.join(' ') + p; ua = ua.charAt(0).toUpperCase() + ua.slice(1);
+            const isCorrect = ua.toLowerCase() === q.answer.toLowerCase();
+            if (isCorrect) score++;
+            showResult(isCorrect, q.answer);
+        }
+
+        // ===== 4択 =====
+        function renderChoice(q) {
+            const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
+            let choices;
+            if (q.pool) {
+                const others = q.pool.filter(w => w !== q.answer);
+                choices = shuffle([q.answer, ...shuffle(others).slice(0, 3)]);
+            } else {
+                choices = shuffle([...q.choices]);
+            }
+            let h = q.hint ? `<div class="question-hint">${escHtml(q.hint)}</div>` : '';
+            qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}</div>`;
+            let btns = '';
+            choices.forEach((ch, i) => { btns += `<button class="choice-btn" id="ch${i}" onclick="checkChoice(this,'${escHtml(ch)}')">${escHtml(ch)}</button>` });
+            aa.innerHTML = btns;
+        }
+
+        function checkChoice(btn, selected) {
+            const q = questions[currentIndex], correct = q.answer;
+            document.querySelectorAll('.choice-btn').forEach(b => { b.disabled = true; if (b.textContent === correct) b.classList.add('correct') });
+            const isCorrect = selected === correct;
+            if (isCorrect) score++;
+            if (!isCorrect) btn.classList.add('incorrect');
+            showResult(isCorrect, correct);
+        }
+
+        // ===== 単語入力 =====
+        function renderWord(q) {
+            const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
+            qa.innerHTML = `<div class="question-card"><div class="question-jp" style="font-size:1.2rem;text-align:center">${escHtml(q.jp)}</div></div>
+  <input class="word-input" id="wordInput" type="text" placeholder="答えを入力..." autocomplete="off" autocapitalize="off" spellcheck="false">`;
+            aa.innerHTML = `<button class="action-btn btn-check" onclick="checkWord()">回答する</button>`;
+            const inp = document.getElementById('wordInput');
+            inp.addEventListener('keydown', e => { if (e.key === 'Enter') checkWord() });
+            setTimeout(() => inp.focus(), 100);
+        }
+
+        function checkWord() {
+            const inp = document.getElementById('wordInput'), q = questions[currentIndex];
+            if (!inp.value.trim()) return;
+            const isCorrect = inp.value.trim().toLowerCase() === q.answer.toLowerCase();
+            if (isCorrect) score++;
+            showResult(isCorrect, q.answer);
+        }
+
+        // ===== 結果表示 =====
+        function showResult(isCorrect, correctAnswer) {
+            const ov = document.getElementById('resultOverlay'), card = document.getElementById('overlayCard');
+            const icon = document.getElementById('resultIcon'), label = document.getElementById('resultLabel');
+            const ansText = document.getElementById('correctAnswerText');
+            card.className = 'overlay-card ' + (isCorrect ? 'correct' : 'incorrect');
+            icon.textContent = isCorrect ? '🎉' : '😢';
+            label.textContent = isCorrect ? '正解！' : '不正解';
+            label.className = 'result-label ' + (isCorrect ? 'correct' : 'incorrect');
+            ansText.textContent = correctAnswer;
+            document.getElementById('correctAnswerBox').style.display = '';
+            document.querySelector('.correct-answer-label').textContent = '正解';
+            ov.classList.add('show');
+        }
+
+        function nextQuestion() { document.getElementById('resultOverlay').classList.remove('show'); currentIndex++; renderQuestion() }
+
+        function showFinish() {
+            const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
+            const pct = Math.round((score / questions.length) * 100);
+            document.getElementById('progressInfo').textContent = '';
+            qa.innerHTML = `<div class="finish-screen show">
+                <div class="finish-icon">🏆</div>
+                <div class="finish-title">ALL COMPLETE!</div>
+                <div class="score-display">${score} / ${questions.length} 正解（${pct}%）</div>
+                <div class="finish-subtitle">すべての問題を終了しました！</div>
+            </div>`;
+            aa.innerHTML = `<button class="action-btn btn-next" onclick="goHome()" style="margin-top:24px">🏠 ホームに戻る</button>
+  <button class="action-btn btn-check" onclick="startMode('${currentMode}')" style="margin-top:12px">🔄 もう一度挑戦する</button>`;
+        }
+
+        // ===== パーティクル =====
+        (function () { const c = document.getElementById('particles'); for (let i = 0; i < 25; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.animationDuration = (8 + Math.random() * 12) + 's'; p.style.animationDelay = Math.random() * 10 + 's'; p.style.width = (1 + Math.random() * 2) + 'px'; p.style.height = p.style.width; const cols = ['var(--primary)', 'var(--secondary)', 'var(--accent)']; p.style.background = cols[Math.floor(Math.random() * cols.length)]; c.appendChild(p) } })();
+    </script>
+</body>
+
+</html>
