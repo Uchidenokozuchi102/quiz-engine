@@ -1,0 +1,212 @@
+{
+  "title": "中2 2学期期末 英語テスト対策",
+  "subtitle": "比較級・最上級・道案内・長文読解",
+  "icon": "📝",
+  "modes": {
+    "choice": {
+      "label": "4 CHOICES",
+      "icon": "🔢",
+      "description": "4択問題 — 正しい答えを選ぼう",
+      "questions": [
+        {
+          "jp": "I did (　　) better in English than I thought.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["good", "better", "well", "best"],
+          "answer": "well"
+        },
+        {
+          "jp": "Mr. Miyatake talks to the students (　　) a smile.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["in", "of", "with", "at"],
+          "answer": "with"
+        },
+        {
+          "jp": "He can run the fastest (　　) this city.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["in", "on", "of", "at"],
+          "answer": "in"
+        },
+        {
+          "jp": "You drank (　　) soda than I did.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["much", "more", "most", "many"],
+          "answer": "more"
+        },
+        {
+          "jp": "She felt (　　) for him, because he looked very hungry.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["happy", "sorry", "angry", "surprised"],
+          "answer": "sorry"
+        },
+        {
+          "jp": "This movie is the oldest (　　) the three.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["in", "on", "of", "by"],
+          "answer": "of"
+        },
+        {
+          "jp": "Kyoto is the (　　) place in Japan.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["beautifulest", "more beautiful", "most beautiful", "beautifully"],
+          "answer": "most beautiful"
+        },
+        {
+          "jp": "The Vatican City is (　　) Tokyo Disneyland.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["as long as", "as large as", "as tall as", "as wide as"],
+          "answer": "as large as"
+        },
+        {
+          "jp": "Today is (　　) than yesterday.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["hotter", "more hotter", "hoter", "hottest"],
+          "answer": "hotter"
+        },
+        {
+          "jp": "Be strong, young man, (　　) you'll have a great future.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["and", "or", "but", "so"],
+          "answer": "and"
+        },
+        {
+          "jp": "I'm a little (　　) to drink this milk.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["alive", "away", "afraid", "alone"],
+          "answer": "afraid"
+        },
+        {
+          "jp": "When the boy was (　　) to leave, the woman said, 'Wait.'",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["about", "amazing", "well", "ready"],
+          "answer": "about"
+        },
+        {
+          "jp": "Please give us your (　　) on this book.",
+          "hint": "ア〜エから正しい語を選びなさい",
+          "choices": ["feedback", "bill", "delivery", "order"],
+          "answer": "feedback"
+        },
+        {
+          "jp": "次の2文の内、表の内容と合っているものはどれか。\n① Thailand is the largest country of the four.\n② Thailand is not as small as the Philippines.\n（表: Thailand=513,120km², Philippines=300,000km², Indonesia=1,904,569km², Malaysia=330,000km²）",
+          "hint": "4か国の面積の表から正しい文を選びなさい",
+          "choices": [
+            "①のみ正しい",
+            "②のみ正しい",
+            "①②両方正しい",
+            "①②両方間違い"
+          ],
+          "answer": "②のみ正しい"
+        },
+        {
+          "jp": "Why can't kangaroos live in the city?\n（カンガルーはなぜ都市で生きられないか）",
+          "hint": "本文より: Kangaroos need open grassland and they can't live in cities.",
+          "choices": [
+            "Because they can't find food and water.",
+            "Because they don't need much water.",
+            "Because they always swim.",
+            "Because they prefer a cold climate."
+          ],
+          "answer": "Because they can't find food and water."
+        },
+        {
+          "jp": "How does a kangaroo carry its baby?\n（カンガルーはどのように赤ちゃんを運ぶか）",
+          "hint": "本文より: The kangaroo carries its baby in a pouch（袋）on its stomach.",
+          "choices": [
+            "In a pouch on its stomach.",
+            "On its back.",
+            "In its mouth.",
+            "Under its tail."
+          ],
+          "answer": "In a pouch on its stomach."
+        },
+        {
+          "jp": "How do kangaroos communicate with each other?\n（カンガルーはどのように仲間とコミュニケーションをとるか）",
+          "hint": "本文より: They tap the ground with their feet.",
+          "choices": [
+            "They tap the ground with their feet.",
+            "They make a loud sound with their mouth.",
+            "They jump over each other.",
+            "They bite their body."
+          ],
+          "answer": "They tap the ground with their feet."
+        },
+        {
+          "jp": "What is true about kangaroos jumping?\n（カンガルーのジャンプに関して正しいのはどれか）",
+          "hint": "本文より: They never get tired when they jump far and they can jump over one hundred meters.",
+          "choices": [
+            "They never get tired when they jump far.",
+            "They can jump over one thousand meters.",
+            "They always fall when they land.",
+            "They jump more slowly than other animals."
+          ],
+          "answer": "They never get tired when they jump far."
+        },
+        {
+          "jp": "Which statement best describes kangaroos according to the passage?\n（本文の内容に最も合っているのはどれか）",
+          "hint": "本文の結論部分: Kangaroos are one of the most amazing mammals in the world.",
+          "choices": [
+            "Kangaroos are one of the most amazing mammals in the world.",
+            "Kangaroos are the fastest animals in Australia.",
+            "Kangaroos live only in forests.",
+            "Kangaroos are afraid of humans."
+          ],
+          "answer": "Kangaroos are one of the most amazing mammals in the world."
+        }
+      ]
+    },
+    "rearrange": {
+      "label": "REARRANGE",
+      "icon": "🔀",
+      "description": "並び替え問題 — 単語を正しい順序に並べよう",
+      "questions": [
+        {
+          "jp": "私は彼女ほど上手にピアノを弾けません。",
+          "words": ["I", "can't", "play", "the piano", "as", "well", "as", "her"],
+          "answer": "I can't play the piano as well as her."
+        },
+        {
+          "jp": "このクラスでEijiと同じくらい背が高い生徒はいません。（Eijiが一番背が高い）",
+          "words": ["No", "other", "student", "is", "as", "tall", "as", "Eiji", "in", "this class"],
+          "answer": "No other student is as tall as Eiji in this class."
+        },
+        {
+          "jp": "私の姉は私より3つ年上です。",
+          "words": ["My sister", "is", "three", "years", "older", "than", "me"],
+          "answer": "My sister is three years older than me."
+        },
+        {
+          "jp": "あなたは全員の中で最も一生懸命練習しました。",
+          "words": ["You", "practiced", "the", "hardest", "of", "all"],
+          "answer": "You practiced the hardest of all."
+        },
+        {
+          "jp": "文字が小さすぎて私には読めません。",
+          "words": ["The", "letters", "are", "too", "small", "for", "me", "to", "read"],
+          "answer": "The letters are too small for me to read."
+        },
+        {
+          "jp": "日本語訳: 彼女はバスケットボールをするときEijiと同じくらい上手です。",
+          "words": ["She", "is", "as", "good", "as", "Eiji", "when", "she", "plays basketball"],
+          "answer": "She is as good as Eiji when she plays basketball."
+        }
+      ]
+    },
+    "word": {
+      "label": "VOCABULARY",
+      "icon": "🔤",
+      "description": "単語テスト — 英単語を直接入力しよう",
+      "questions": [
+        { "jp": "笑顔（with a ___）", "answer": "smile" },
+        { "jp": "フィードバック・意見（～ on this book）", "answer": "feedback" },
+        { "jp": "袋（カンガルーが赤ちゃんを入れる体の袋）", "answer": "pouch" },
+        { "jp": "妊娠している（形容詞）", "answer": "pregnant" },
+        { "jp": "政府・行政（kangaroo protection の主語になる語）", "answer": "government" },
+        { "jp": "草地（open ___, カンガルーが暮らす場所）", "answer": "grassland" },
+        { "jp": "哺乳類", "answer": "mammal" },
+        { "jp": "比較する（to ___ A with B）", "answer": "compare" },
+        { "jp": "届ける・配達する（名詞形: delivery）", "answer": "deliver" },
+        { "jp": "驚くべき（___ animal）", "answer": "amazing" }
+      ]
+    }
+  }
+}

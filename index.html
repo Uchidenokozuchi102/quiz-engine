@@ -441,7 +441,7 @@
         }
 
         function updateProgress() {
-            document.getElementById('progressInfo').textContent = `${currentIndex + 1} / ${questions.length}`;
+            document.getElementById('progressInfo').textContent = '';
         }
 
         // --- 問題描画の振り分け ---
@@ -586,12 +586,11 @@
 
         function showFinish() {
             const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
-            const pct = Math.round((score / questions.length) * 100);
             document.getElementById('progressInfo').textContent = '';
             qa.innerHTML = `<div class="finish-screen show">
-                <div class="finish-icon">🏆</div>
-                <div class="finish-title">ALL COMPLETE!</div>
-                <div class="score-display">${score} / ${questions.length} 正解（${pct}%）</div>
+                <div class="finish-icon">🎉</div>
+                <div class="finish-title">おめでとう！</div>
+                <div class="score-display">${score} / ${questions.length} 正解</div>
                 <div class="finish-subtitle">すべての問題を終了しました！</div>
             </div>`;
             aa.innerHTML = `<button class="action-btn btn-next" onclick="goHome()" style="margin-top:24px">🏠 ホームに戻る</button>
