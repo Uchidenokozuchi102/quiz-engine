@@ -9,86 +9,86 @@
       "description": "4択問題 — 正しい答えを選ぼう",
       "questions": [
         {
-          "jp": "I did (　　) better in English than I thought.",
-          "hint": "ア〜エから正しい語を選びなさい",
-          "choices": ["good", "better", "well", "best"],
-          "answer": "well"
+          "jp": "I did (　　) in English than I thought.",
+          "hint": "",
+          "choices": ["good", "better", "the best", "well"],
+          "answer": "the best"
         },
         {
           "jp": "Mr. Miyatake talks to the students (　　) a smile.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["in", "of", "with", "at"],
           "answer": "with"
         },
         {
           "jp": "He can run the fastest (　　) this city.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["in", "on", "of", "at"],
           "answer": "in"
         },
         {
           "jp": "You drank (　　) soda than I did.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["much", "more", "most", "many"],
           "answer": "more"
         },
         {
           "jp": "She felt (　　) for him, because he looked very hungry.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["happy", "sorry", "angry", "surprised"],
           "answer": "sorry"
         },
         {
           "jp": "This movie is the oldest (　　) the three.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["in", "on", "of", "by"],
           "answer": "of"
         },
         {
           "jp": "Kyoto is the (　　) place in Japan.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["beautifulest", "more beautiful", "most beautiful", "beautifully"],
           "answer": "most beautiful"
         },
         {
           "jp": "The Vatican City is (　　) Tokyo Disneyland.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["as long as", "as large as", "as tall as", "as wide as"],
           "answer": "as large as"
         },
         {
           "jp": "Today is (　　) than yesterday.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["hotter", "more hotter", "hoter", "hottest"],
           "answer": "hotter"
         },
         {
           "jp": "Be strong, young man, (　　) you'll have a great future.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["and", "or", "but", "so"],
           "answer": "and"
         },
         {
           "jp": "I'm a little (　　) to drink this milk.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["alive", "away", "afraid", "alone"],
           "answer": "afraid"
         },
         {
           "jp": "When the boy was (　　) to leave, the woman said, 'Wait.'",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["about", "amazing", "well", "ready"],
           "answer": "about"
         },
         {
           "jp": "Please give us your (　　) on this book.",
-          "hint": "ア〜エから正しい語を選びなさい",
+          "hint": "",
           "choices": ["feedback", "bill", "delivery", "order"],
           "answer": "feedback"
         },
         {
           "jp": "次の2文の内、表の内容と合っているものはどれか。\n① Thailand is the largest country of the four.\n② Thailand is not as small as the Philippines.\n（表: Thailand=513,120km², Philippines=300,000km², Indonesia=1,904,569km², Malaysia=330,000km²）",
-          "hint": "4か国の面積の表から正しい文を選びなさい",
+          "hint": "",
           "choices": [
             "①のみ正しい",
             "②のみ正しい",
@@ -96,7 +96,14 @@
             "①②両方間違い"
           ],
           "answer": "②のみ正しい"
-        },
+        }
+      ]
+    },
+    "reading": {
+      "label": "読解チャレンジ",
+      "icon": "📖",
+      "description": "長文読解 — 本文の内容から正しい答えを選ぼう",
+      "questions": [
         {
           "jp": "Why can't kangaroos live in the city?\n（カンガルーはなぜ都市で生きられないか）",
           "hint": "本文より: Kangaroos need open grassland and they can't live in cities.",

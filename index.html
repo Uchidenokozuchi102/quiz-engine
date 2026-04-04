@@ -523,25 +523,28 @@
         }
 
         // ===== 4択 =====
+        let currentChoices = [];
+
         function renderChoice(q) {
             const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
-            let choices;
             if (q.pool) {
                 const others = q.pool.filter(w => w !== q.answer);
-                choices = shuffle([q.answer, ...shuffle(others).slice(0, 3)]);
+                currentChoices = shuffle([q.answer, ...shuffle(others).slice(0, 3)]);
             } else {
-                choices = shuffle([...q.choices]);
+                currentChoices = shuffle([...q.choices]);
             }
             let h = q.hint ? `<div class="question-hint">${escHtml(q.hint)}</div>` : '';
             qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}</div>`;
             let btns = '';
-            choices.forEach((ch, i) => { btns += `<button class="choice-btn" id="ch${i}" onclick="checkChoice(this,'${escHtml(ch)}')">${escHtml(ch)}</button>` });
+            currentChoices.forEach((ch, i) => { btns += `<button class="choice-btn" id="ch${i}" data-idx="${i}" onclick="checkChoice(this)">${escHtml(ch)}</button>` });
             aa.innerHTML = btns;
         }
 
-        function checkChoice(btn, selected) {
+        function checkChoice(btn) {
+            const idx = parseInt(btn.dataset.idx, 10);
+            const selected = currentChoices[idx];
             const q = questions[currentIndex], correct = q.answer;
-            document.querySelectorAll('.choice-btn').forEach(b => { b.disabled = true; if (b.textContent === correct) b.classList.add('correct') });
+            document.querySelectorAll('.choice-btn').forEach((b, i) => { b.disabled = true; if (currentChoices[parseInt(b.dataset.idx, 10)] === correct) b.classList.add('correct') });
             const isCorrect = selected === correct;
             if (isCorrect) score++;
             if (!isCorrect) btn.classList.add('incorrect');
