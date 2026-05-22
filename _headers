@@ -1,16 +1,8 @@
 # Netlify HTTPレスポンスヘッダー設定
-# LINE/X等の内蔵ブラウザはキャッシュが強いので、
-# HTML/JSON は毎回サーバー問い合わせさせる
+# LINE/X等の内蔵ブラウザはキャッシュが強いので毎回サーバー問い合わせさせる
+# /* で全パス対象（rewrite経由のパスにも適用させるため）
 
-/index.html
+/*
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
-
-/*.json
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
-
-/_redirects
-  Cache-Control: no-cache, no-store, must-revalidate
