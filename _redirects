@@ -1,0 +1,10 @@
+# Netlify rewrite ルール: 短縮パス → index.html
+# 新クイズ追加時:
+#   1. quiz-engine/<name>-YYYY-MM.json を作成
+#   2. index.html の pathMap に1行追加
+#   3. この _redirects に1行追加（下記の形式）
+#   4. git push（Netlify自動デプロイ）
+
+/english     /index.html   200
+/philosophy  /index.html   200
+/toyotsu     /index.html   200

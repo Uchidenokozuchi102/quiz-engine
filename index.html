@@ -384,11 +384,23 @@
         let draggedEl = null, draggedFromSlot = false;
 
         // --- データ読み込み ---
-        // data.json のパスは ?data=xxx.json で指定可能（デフォルト: sample-data.json）
+        // 優先順: ?data=xxx.json → パス /english → デフォルト
+        // 新しいクイズを追加するときは pathMap に1行追加するだけ
+        const pathMap = {
+            'english': 'english-2026-05.json',
+            'philosophy': 'philosophy-2026-05.json',
+            'toyotsu': 'toyotsu-2nd-final.json'
+        };
+        const QUIZ_VERSION = '4'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
         const params = new URLSearchParams(location.search);
-        const dataFile = params.get('data') || 'sample-data.json';
+        let dataFile = params.get('data');
+        if (!dataFile) {
+            const path = location.pathname.replace(/^\//, '').replace(/\/$/, '').toLowerCase();
+            dataFile = pathMap[path] || 'sample-data.json';
+        }
+        const fetchUrl = dataFile + (dataFile.includes('?') ? '&' : '?') + 'v=' + QUIZ_VERSION;
 
-        fetch(dataFile)
+        fetch(fetchUrl)
             .then(r => { if (!r.ok) throw new Error('データファイルが見つかりません: ' + dataFile); return r.json() })
             .then(data => { quizData = data; initApp() })
             .catch(err => {
