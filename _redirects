@@ -1,10 +1,18 @@
 # Netlify rewrite ルール: 短縮パス → index.html
+# 命名規約: en=英語, ma=数学, ph=公共/哲学, bi=生物, hi=歴史, jp=国語
+# 別生徒用は -a/-b/-c suffix (例: /en-a)
+#
 # 新クイズ追加時:
-#   1. quiz-engine/<name>-YYYY-MM.json を作成
+#   1. quiz-engine/<教科名>-YYYY-MM.json を作成
 #   2. index.html の pathMap に1行追加
-#   3. この _redirects に1行追加（下記の形式）
+#   3. この _redirects に1行追加
 #   4. git push（Netlify自動デプロイ）
 
+# 極短キー（メイン）
+/en   /index.html   200
+/ph   /index.html   200
+
+# 後方互換（旧URL）
 /english     /index.html   200
 /philosophy  /index.html   200
 /toyotsu     /index.html   200

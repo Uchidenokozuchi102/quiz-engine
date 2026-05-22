@@ -384,12 +384,17 @@
         let draggedEl = null, draggedFromSlot = false;
 
         // --- データ読み込み ---
-        // 優先順: ?data=xxx.json → パス /english → デフォルト
-        // 新しいクイズを追加するときは pathMap に1行追加するだけ
+        // 優先順: ?data=xxx.json → パス /en → デフォルト
+        // 新しいクイズ追加時は pathMap に1行追加するだけ
+        // 命名: en=英語, ma=数学, ph=公共/哲学, bi=生物, hi=歴史, jp=国語
+        // 別生徒は -a/-b/-c の suffix (例: en-a)
         const pathMap = {
+            'en': 'english-2026-05.json',
+            'ph': 'philosophy-2026-05.json',
+            'toyotsu': 'toyotsu-2nd-final.json',
+            // 後方互換: 旧URLも引き続き動かす
             'english': 'english-2026-05.json',
-            'philosophy': 'philosophy-2026-05.json',
-            'toyotsu': 'toyotsu-2nd-final.json'
+            'philosophy': 'philosophy-2026-05.json'
         };
         const QUIZ_VERSION = '4'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
         const params = new URLSearchParams(location.search);
