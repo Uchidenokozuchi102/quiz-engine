@@ -1272,7 +1272,7 @@
       ]
     },
     "sys": {
-      "label": "📝 システム英単語 4択",
+      "label": "システム英単語 4択",
       "icon": "📝",
       "description": "春休み課題テスト同形式",
       "questions": [
@@ -1664,7 +1664,7 @@
       ]
     },
     "weak": {
-      "label": "🎯 弱点集中",
+      "label": "弱点集中",
       "icon": "🎯",
       "description": "間違えやすい単語を重点復習",
       "questions": [
