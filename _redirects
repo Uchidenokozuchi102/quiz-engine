@@ -9,8 +9,9 @@
 #   4. git push（Netlify自動デプロイ）
 
 # 極短キー（メイン）
-/en   /index.html   200
-/ph   /index.html   200
+/en    /index.html   200
+/en-a  /index.html   200
+/ph    /index.html   200
 
 # 後方互換（旧URL）
 /english     /index.html   200

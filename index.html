@@ -218,6 +218,17 @@
             border-left: 3px solid var(--secondary)
         }
 
+        .speak-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 12px; padding: 9px 18px;
+            border: 1px solid var(--glass-border); border-radius: 999px;
+            background: rgba(201, 164, 74, 0.10); color: var(--accent);
+            font-size: .9rem; font-weight: 700; font-family: 'Noto Sans JP', sans-serif;
+            cursor: pointer; transition: all .25s
+        }
+        .speak-btn:hover { border-color: var(--primary); background: rgba(201, 164, 74, 0.18); transform: translateY(-1px) }
+        .speak-btn:active { transform: scale(.96) }
+
         /* 並び替え */
         .answer-slots {
             display: flex; flex-wrap: wrap; gap: 8px; min-height: 54px; padding: 16px;
@@ -372,6 +383,7 @@
                 <div class="correct-answer-label">正解</div>
                 <div class="correct-answer-text" id="correctAnswerText"></div>
             </div>
+            <button class="speak-btn" id="overlaySpeakBtn" style="display:none;margin:0 auto 14px" onclick="speak(window.__currentSay)">🔊 発音を聞く</button>
             <button class="overlay-btn next" onclick="nextQuestion()">次の問題へ &#8594;</button>
         </div>
     </div>
@@ -390,13 +402,14 @@
         // 別生徒は -a/-b/-c の suffix (例: en-a)
         const pathMap = {
             'en': 'english-2026-05.json',
+            'en-a': 'english-a-2026-05.json',
             'ph': 'philosophy-2026-05.json',
             'toyotsu': 'toyotsu-2nd-final.json',
             // 後方互換: 旧URLも引き続き動かす
             'english': 'english-2026-05.json',
             'philosophy': 'philosophy-2026-05.json'
         };
-        const QUIZ_VERSION = '4'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
+        const QUIZ_VERSION = '5'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
         const params = new URLSearchParams(location.search);
         let dataFile = params.get('data');
         if (!dataFile) {
@@ -442,6 +455,17 @@
 
         function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
 
+        // --- 音声読み上げ（英語の発音）。端末ブラウザの読み上げ機能を使う ---
+        function speak(text) {
+            try {
+                if (!('speechSynthesis' in window) || !text) return;
+                speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US'; u.rate = 0.85;
+                speechSynthesis.speak(u);
+            } catch (e) { /* 非対応ブラウザでは無音 */ }
+        }
+
         // --- モード開始 ---
         function startMode(mode) {
             currentMode = mode; currentIndex = 0; score = 0;
@@ -471,9 +495,9 @@
             updateProgress();
             const q = questions[currentIndex];
 
-            // 問題タイプの自動判定: words→並び替え、choices→4択、それ以外→入力式
+            // 問題タイプの自動判定: words→並び替え、choices/pool→4択、それ以外→入力式
             if (q.words) renderRearrange(q);
-            else if (q.choices) renderChoice(q);
+            else if (q.choices || q.pool) renderChoice(q);
             else renderWord(q);
         }
 
@@ -549,13 +573,17 @@
         function renderChoice(q) {
             const qa = document.getElementById('questionArea'), aa = document.getElementById('actionArea');
             if (q.pool) {
-                const others = q.pool.filter(w => w !== q.answer);
-                currentChoices = shuffle([q.answer, ...shuffle(others).slice(0, 3)]);
+                // 誤答は重複文言・正解と同じ文言を除外して選ぶ
+                const seen = new Set([q.answer]); const others = [];
+                for (const w of shuffle(q.pool)) { if (!seen.has(w)) { seen.add(w); others.push(w); } }
+                currentChoices = shuffle([q.answer, ...others.slice(0, 3)]);
             } else {
                 currentChoices = shuffle([...q.choices]);
             }
             let h = q.hint ? `<div class="question-hint">${escHtml(q.hint)}</div>` : '';
-            qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}</div>`;
+            const sp = (q.sayPrompt && q.say) ? `<div><button class="speak-btn" id="cardSpeakBtn">🔊 音声を聞く</button></div>` : '';
+            qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}${sp}</div>`;
+            if (q.sayPrompt && q.say) { document.getElementById('cardSpeakBtn').onclick = () => speak(q.say); }
             let btns = '';
             currentChoices.forEach((ch, i) => { btns += `<button class="choice-btn" id="ch${i}" data-idx="${i}" onclick="checkChoice(this)">${escHtml(ch)}</button>` });
             aa.innerHTML = btns;
@@ -603,6 +631,9 @@
             ansText.textContent = correctAnswer;
             document.getElementById('correctAnswerBox').style.display = '';
             document.querySelector('.correct-answer-label').textContent = '正解';
+            const sb = document.getElementById('overlaySpeakBtn'), cq = questions[currentIndex];
+            if (cq && cq.say) { window.__currentSay = cq.say; sb.style.display = 'inline-flex'; }
+            else { sb.style.display = 'none'; }
             ov.classList.add('show');
         }
 
