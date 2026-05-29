@@ -409,7 +409,7 @@
             'english': 'english-2026-05.json',
             'philosophy': 'philosophy-2026-05.json'
         };
-        const QUIZ_VERSION = '5'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
+        const QUIZ_VERSION = '6'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
         const params = new URLSearchParams(location.search);
         let dataFile = params.get('data');
         if (!dataFile) {
@@ -436,7 +436,7 @@
                 modesHtml += `<button class="mode-btn" onclick="startMode('${key}')">
                     <div class="mode-btn-icon">${mode.icon || '📝'}</div>
                     <div class="mode-btn-title">${mode.label}</div>
-                    <div class="mode-btn-desc">${mode.description || ''}</div>
+                    ${mode.description ? `<div class="mode-btn-desc">${mode.description}</div>` : ''}
                 </button>`;
             }
 
@@ -583,7 +583,7 @@
             let h = q.hint ? `<div class="question-hint">${escHtml(q.hint)}</div>` : '';
             const sp = (q.sayPrompt && q.say) ? `<div><button class="speak-btn" id="cardSpeakBtn">🔊 音声を聞く</button></div>` : '';
             qa.innerHTML = `<div class="question-card"><div class="question-jp">${escHtml(q.jp)}</div>${h}${sp}</div>`;
-            if (q.sayPrompt && q.say) { document.getElementById('cardSpeakBtn').onclick = () => speak(q.say); }
+            if (q.sayPrompt && q.say) { document.getElementById('cardSpeakBtn').onclick = () => speak(q.say); speak(q.say); }
             let btns = '';
             currentChoices.forEach((ch, i) => { btns += `<button class="choice-btn" id="ch${i}" data-idx="${i}" onclick="checkChoice(this)">${escHtml(ch)}</button>` });
             aa.innerHTML = btns;
@@ -632,8 +632,10 @@
             document.getElementById('correctAnswerBox').style.display = '';
             document.querySelector('.correct-answer-label').textContent = '正解';
             const sb = document.getElementById('overlaySpeakBtn'), cq = questions[currentIndex];
-            if (cq && cq.say) { window.__currentSay = cq.say; sb.style.display = 'inline-flex'; }
-            else { sb.style.display = 'none'; }
+            if (cq && cq.say) {
+                window.__currentSay = cq.say; sb.style.display = 'inline-flex';
+                if (!cq.sayPrompt) speak(cq.say); // 日→英は回答後に自動再生（英→日は出題時に再生済み）
+            } else { sb.style.display = 'none'; }
             ov.classList.add('show');
         }
 

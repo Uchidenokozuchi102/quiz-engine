@@ -6,11 +6,11 @@
     "core1_e2j": {
       "label": "① きほんの単語　英→日",
       "icon": "📗",
-      "description": "英語を見て意味をえらぼう",
+      "description": "",
       "questions": [
         {
           "jp": "I",
-          "hint": "覚え方：アイ",
+          "hint": "発音：アイ",
           "say": "I",
           "sayPrompt": true,
           "pool": [
@@ -43,7 +43,7 @@
         },
         {
           "jp": "you",
-          "hint": "覚え方：ユー",
+          "hint": "発音：ユー",
           "say": "you",
           "sayPrompt": true,
           "pool": [
@@ -76,7 +76,7 @@
         },
         {
           "jp": "he",
-          "hint": "覚え方：ヒー",
+          "hint": "発音：ヒー",
           "say": "he",
           "sayPrompt": true,
           "pool": [
@@ -109,7 +109,7 @@
         },
         {
           "jp": "she",
-          "hint": "覚え方：シー",
+          "hint": "発音：シー",
           "say": "she",
           "sayPrompt": true,
           "pool": [
@@ -142,7 +142,7 @@
         },
         {
           "jp": "we",
-          "hint": "覚え方：ウィー",
+          "hint": "発音：ウィー",
           "say": "we",
           "sayPrompt": true,
           "pool": [
@@ -175,7 +175,7 @@
         },
         {
           "jp": "my",
-          "hint": "覚え方：マイ",
+          "hint": "発音：マイ",
           "say": "my",
           "sayPrompt": true,
           "pool": [
@@ -208,7 +208,7 @@
         },
         {
           "jp": "your",
-          "hint": "覚え方：ユア",
+          "hint": "発音：ユア",
           "say": "your",
           "sayPrompt": true,
           "pool": [
@@ -241,7 +241,7 @@
         },
         {
           "jp": "am",
-          "hint": "覚え方：アム",
+          "hint": "発音：アム",
           "say": "am",
           "sayPrompt": true,
           "pool": [
@@ -274,7 +274,7 @@
         },
         {
           "jp": "is",
-          "hint": "覚え方：イズ",
+          "hint": "発音：イズ",
           "say": "is",
           "sayPrompt": true,
           "pool": [
@@ -307,7 +307,7 @@
         },
         {
           "jp": "are",
-          "hint": "覚え方：アー",
+          "hint": "発音：アー",
           "say": "are",
           "sayPrompt": true,
           "pool": [
@@ -340,7 +340,7 @@
         },
         {
           "jp": "do",
-          "hint": "覚え方：ドゥ",
+          "hint": "発音：ドゥ",
           "say": "do",
           "sayPrompt": true,
           "pool": [
@@ -373,7 +373,7 @@
         },
         {
           "jp": "not",
-          "hint": "覚え方：ノット",
+          "hint": "発音：ノット",
           "say": "not",
           "sayPrompt": true,
           "pool": [
@@ -406,7 +406,7 @@
         },
         {
           "jp": "yes",
-          "hint": "覚え方：イエス",
+          "hint": "発音：イエス",
           "say": "yes",
           "sayPrompt": true,
           "pool": [
@@ -439,7 +439,7 @@
         },
         {
           "jp": "no",
-          "hint": "覚え方：ノー",
+          "hint": "発音：ノー",
           "say": "no",
           "sayPrompt": true,
           "pool": [
@@ -472,7 +472,7 @@
         },
         {
           "jp": "a",
-          "hint": "覚え方：ア",
+          "hint": "発音：ア",
           "say": "a",
           "sayPrompt": true,
           "pool": [
@@ -505,7 +505,7 @@
         },
         {
           "jp": "the",
-          "hint": "覚え方：ザ",
+          "hint": "発音：ザ",
           "say": "the",
           "sayPrompt": true,
           "pool": [
@@ -538,7 +538,7 @@
         },
         {
           "jp": "this",
-          "hint": "覚え方：ジス",
+          "hint": "発音：ジス",
           "say": "this",
           "sayPrompt": true,
           "pool": [
@@ -571,7 +571,7 @@
         },
         {
           "jp": "that",
-          "hint": "覚え方：ザット",
+          "hint": "発音：ザット",
           "say": "that",
           "sayPrompt": true,
           "pool": [
@@ -604,7 +604,7 @@
         },
         {
           "jp": "and",
-          "hint": "覚え方：アンド",
+          "hint": "発音：アンド",
           "say": "and",
           "sayPrompt": true,
           "pool": [
@@ -637,7 +637,7 @@
         },
         {
           "jp": "but",
-          "hint": "覚え方：バット",
+          "hint": "発音：バット",
           "say": "but",
           "sayPrompt": true,
           "pool": [
@@ -670,7 +670,7 @@
         },
         {
           "jp": "can",
-          "hint": "覚え方：キャン",
+          "hint": "発音：キャン",
           "say": "can",
           "sayPrompt": true,
           "pool": [
@@ -703,7 +703,7 @@
         },
         {
           "jp": "here",
-          "hint": "覚え方：ヒア",
+          "hint": "発音：ヒア",
           "say": "here",
           "sayPrompt": true,
           "pool": [
@@ -736,7 +736,7 @@
         },
         {
           "jp": "like",
-          "hint": "覚え方：ライク",
+          "hint": "発音：ライク",
           "say": "like",
           "sayPrompt": true,
           "pool": [
@@ -769,7 +769,7 @@
         },
         {
           "jp": "have",
-          "hint": "覚え方：ハヴ",
+          "hint": "発音：ハヴ",
           "say": "have",
           "sayPrompt": true,
           "pool": [
@@ -805,11 +805,11 @@
     "core1_j2e": {
       "label": "② きほんの単語　日→英",
       "icon": "📙",
-      "description": "意味を見て英語をえらぼう",
+      "description": "",
       "questions": [
         {
           "jp": "私は",
-          "hint": "覚え方：アイ",
+          "hint": "発音：アイ",
           "say": "I",
           "pool": [
             "I",
@@ -841,7 +841,7 @@
         },
         {
           "jp": "あなた（たち）",
-          "hint": "覚え方：ユー",
+          "hint": "発音：ユー",
           "say": "you",
           "pool": [
             "I",
@@ -873,7 +873,7 @@
         },
         {
           "jp": "彼は",
-          "hint": "覚え方：ヒー",
+          "hint": "発音：ヒー",
           "say": "he",
           "pool": [
             "I",
@@ -905,7 +905,7 @@
         },
         {
           "jp": "彼女は",
-          "hint": "覚え方：シー",
+          "hint": "発音：シー",
           "say": "she",
           "pool": [
             "I",
@@ -937,7 +937,7 @@
         },
         {
           "jp": "私たちは",
-          "hint": "覚え方：ウィー",
+          "hint": "発音：ウィー",
           "say": "we",
           "pool": [
             "I",
@@ -969,7 +969,7 @@
         },
         {
           "jp": "私の",
-          "hint": "覚え方：マイ",
+          "hint": "発音：マイ",
           "say": "my",
           "pool": [
             "I",
@@ -1001,7 +1001,7 @@
         },
         {
           "jp": "あなたの",
-          "hint": "覚え方：ユア",
+          "hint": "発音：ユア",
           "say": "your",
           "pool": [
             "I",
@@ -1033,7 +1033,7 @@
         },
         {
           "jp": "〜です（I のとき）",
-          "hint": "覚え方：アム",
+          "hint": "発音：アム",
           "say": "am",
           "pool": [
             "I",
@@ -1065,7 +1065,7 @@
         },
         {
           "jp": "〜です（he/she/it のとき）",
-          "hint": "覚え方：イズ",
+          "hint": "発音：イズ",
           "say": "is",
           "pool": [
             "I",
@@ -1097,7 +1097,7 @@
         },
         {
           "jp": "〜です（you/we/they のとき）",
-          "hint": "覚え方：アー",
+          "hint": "発音：アー",
           "say": "are",
           "pool": [
             "I",
@@ -1129,7 +1129,7 @@
         },
         {
           "jp": "する／（疑問文をつくる）",
-          "hint": "覚え方：ドゥ",
+          "hint": "発音：ドゥ",
           "say": "do",
           "pool": [
             "I",
@@ -1161,7 +1161,7 @@
         },
         {
           "jp": "〜ない",
-          "hint": "覚え方：ノット",
+          "hint": "発音：ノット",
           "say": "not",
           "pool": [
             "I",
@@ -1193,7 +1193,7 @@
         },
         {
           "jp": "はい",
-          "hint": "覚え方：イエス",
+          "hint": "発音：イエス",
           "say": "yes",
           "pool": [
             "I",
@@ -1225,7 +1225,7 @@
         },
         {
           "jp": "いいえ",
-          "hint": "覚え方：ノー",
+          "hint": "発音：ノー",
           "say": "no",
           "pool": [
             "I",
@@ -1257,7 +1257,7 @@
         },
         {
           "jp": "1つの",
-          "hint": "覚え方：ア",
+          "hint": "発音：ア",
           "say": "a",
           "pool": [
             "I",
@@ -1289,7 +1289,7 @@
         },
         {
           "jp": "その",
-          "hint": "覚え方：ザ",
+          "hint": "発音：ザ",
           "say": "the",
           "pool": [
             "I",
@@ -1321,7 +1321,7 @@
         },
         {
           "jp": "これ",
-          "hint": "覚え方：ジス",
+          "hint": "発音：ジス",
           "say": "this",
           "pool": [
             "I",
@@ -1353,7 +1353,7 @@
         },
         {
           "jp": "あれ",
-          "hint": "覚え方：ザット",
+          "hint": "発音：ザット",
           "say": "that",
           "pool": [
             "I",
@@ -1385,7 +1385,7 @@
         },
         {
           "jp": "〜と…",
-          "hint": "覚え方：アンド",
+          "hint": "発音：アンド",
           "say": "and",
           "pool": [
             "I",
@@ -1417,7 +1417,7 @@
         },
         {
           "jp": "しかし",
-          "hint": "覚え方：バット",
+          "hint": "発音：バット",
           "say": "but",
           "pool": [
             "I",
@@ -1449,7 +1449,7 @@
         },
         {
           "jp": "〜できる",
-          "hint": "覚え方：キャン",
+          "hint": "発音：キャン",
           "say": "can",
           "pool": [
             "I",
@@ -1481,7 +1481,7 @@
         },
         {
           "jp": "ここに",
-          "hint": "覚え方：ヒア",
+          "hint": "発音：ヒア",
           "say": "here",
           "pool": [
             "I",
@@ -1513,7 +1513,7 @@
         },
         {
           "jp": "〜が好きだ",
-          "hint": "覚え方：ライク",
+          "hint": "発音：ライク",
           "say": "like",
           "pool": [
             "I",
@@ -1545,7 +1545,7 @@
         },
         {
           "jp": "持っている",
-          "hint": "覚え方：ハヴ",
+          "hint": "発音：ハヴ",
           "say": "have",
           "pool": [
             "I",
@@ -1580,11 +1580,11 @@
     "core2_e2j": {
       "label": "③ よく使う語　英→日",
       "icon": "📗",
-      "description": "動詞・形容詞など",
+      "description": "",
       "questions": [
         {
           "jp": "want",
-          "hint": "覚え方：ウォント",
+          "hint": "発音：ウォント",
           "say": "want",
           "sayPrompt": true,
           "pool": [
@@ -1618,7 +1618,7 @@
         },
         {
           "jp": "make",
-          "hint": "覚え方：メイク",
+          "hint": "発音：メイク",
           "say": "make",
           "sayPrompt": true,
           "pool": [
@@ -1652,7 +1652,7 @@
         },
         {
           "jp": "play",
-          "hint": "覚え方：プレイ",
+          "hint": "発音：プレイ",
           "say": "play",
           "sayPrompt": true,
           "pool": [
@@ -1686,7 +1686,7 @@
         },
         {
           "jp": "read",
-          "hint": "覚え方：リード",
+          "hint": "発音：リード",
           "say": "read",
           "sayPrompt": true,
           "pool": [
@@ -1720,7 +1720,7 @@
         },
         {
           "jp": "see",
-          "hint": "覚え方：シー",
+          "hint": "発音：シー",
           "say": "see",
           "sayPrompt": true,
           "pool": [
@@ -1754,7 +1754,7 @@
         },
         {
           "jp": "watch",
-          "hint": "覚え方：ウォッチ",
+          "hint": "発音：ウォッチ",
           "say": "watch",
           "sayPrompt": true,
           "pool": [
@@ -1788,7 +1788,7 @@
         },
         {
           "jp": "meet",
-          "hint": "覚え方：ミート",
+          "hint": "発音：ミート",
           "say": "meet",
           "sayPrompt": true,
           "pool": [
@@ -1822,7 +1822,7 @@
         },
         {
           "jp": "take",
-          "hint": "覚え方：テイク",
+          "hint": "発音：テイク",
           "say": "take",
           "sayPrompt": true,
           "pool": [
@@ -1856,7 +1856,7 @@
         },
         {
           "jp": "think",
-          "hint": "覚え方：シンク",
+          "hint": "発音：シンク",
           "say": "think",
           "sayPrompt": true,
           "pool": [
@@ -1890,7 +1890,7 @@
         },
         {
           "jp": "run",
-          "hint": "覚え方：ラン",
+          "hint": "発音：ラン",
           "say": "run",
           "sayPrompt": true,
           "pool": [
@@ -1924,7 +1924,7 @@
         },
         {
           "jp": "sing",
-          "hint": "覚え方：シング",
+          "hint": "発音：シング",
           "say": "sing",
           "sayPrompt": true,
           "pool": [
@@ -1958,7 +1958,7 @@
         },
         {
           "jp": "draw",
-          "hint": "覚え方：ドロー",
+          "hint": "発音：ドロー",
           "say": "draw",
           "sayPrompt": true,
           "pool": [
@@ -1992,7 +1992,7 @@
         },
         {
           "jp": "love",
-          "hint": "覚え方：ラブ",
+          "hint": "発音：ラブ",
           "say": "love",
           "sayPrompt": true,
           "pool": [
@@ -2026,7 +2026,7 @@
         },
         {
           "jp": "call",
-          "hint": "覚え方：コール",
+          "hint": "発音：コール",
           "say": "call",
           "sayPrompt": true,
           "pool": [
@@ -2060,7 +2060,7 @@
         },
         {
           "jp": "good",
-          "hint": "覚え方：グッド",
+          "hint": "発音：グッド",
           "say": "good",
           "sayPrompt": true,
           "pool": [
@@ -2094,7 +2094,7 @@
         },
         {
           "jp": "nice",
-          "hint": "覚え方：ナイス",
+          "hint": "発音：ナイス",
           "say": "nice",
           "sayPrompt": true,
           "pool": [
@@ -2128,7 +2128,7 @@
         },
         {
           "jp": "new",
-          "hint": "覚え方：ニュー",
+          "hint": "発音：ニュー",
           "say": "new",
           "sayPrompt": true,
           "pool": [
@@ -2162,7 +2162,7 @@
         },
         {
           "jp": "cool",
-          "hint": "覚え方：クール",
+          "hint": "発音：クール",
           "say": "cool",
           "sayPrompt": true,
           "pool": [
@@ -2196,7 +2196,7 @@
         },
         {
           "jp": "cute",
-          "hint": "覚え方：キュート",
+          "hint": "発音：キュート",
           "say": "cute",
           "sayPrompt": true,
           "pool": [
@@ -2230,7 +2230,7 @@
         },
         {
           "jp": "great",
-          "hint": "覚え方：グレート",
+          "hint": "発音：グレート",
           "say": "great",
           "sayPrompt": true,
           "pool": [
@@ -2264,7 +2264,7 @@
         },
         {
           "jp": "strong",
-          "hint": "覚え方：ストロング",
+          "hint": "発音：ストロング",
           "say": "strong",
           "sayPrompt": true,
           "pool": [
@@ -2298,7 +2298,7 @@
         },
         {
           "jp": "hot",
-          "hint": "覚え方：ホット",
+          "hint": "発音：ホット",
           "say": "hot",
           "sayPrompt": true,
           "pool": [
@@ -2332,7 +2332,7 @@
         },
         {
           "jp": "white",
-          "hint": "覚え方：ホワイト",
+          "hint": "発音：ホワイト",
           "say": "white",
           "sayPrompt": true,
           "pool": [
@@ -2366,7 +2366,7 @@
         },
         {
           "jp": "black",
-          "hint": "覚え方：ブラック",
+          "hint": "発音：ブラック",
           "say": "black",
           "sayPrompt": true,
           "pool": [
@@ -2400,7 +2400,7 @@
         },
         {
           "jp": "red",
-          "hint": "覚え方：レッド",
+          "hint": "発音：レッド",
           "say": "red",
           "sayPrompt": true,
           "pool": [
@@ -2437,11 +2437,11 @@
     "core2_j2e": {
       "label": "④ よく使う語　日→英",
       "icon": "📙",
-      "description": "動詞・形容詞など",
+      "description": "",
       "questions": [
         {
           "jp": "〜がほしい",
-          "hint": "覚え方：ウォント",
+          "hint": "発音：ウォント",
           "say": "want",
           "pool": [
             "want",
@@ -2474,7 +2474,7 @@
         },
         {
           "jp": "作る",
-          "hint": "覚え方：メイク",
+          "hint": "発音：メイク",
           "say": "make",
           "pool": [
             "want",
@@ -2507,7 +2507,7 @@
         },
         {
           "jp": "（スポーツを）する",
-          "hint": "覚え方：プレイ",
+          "hint": "発音：プレイ",
           "say": "play",
           "pool": [
             "want",
@@ -2540,7 +2540,7 @@
         },
         {
           "jp": "読む",
-          "hint": "覚え方：リード",
+          "hint": "発音：リード",
           "say": "read",
           "pool": [
             "want",
@@ -2573,7 +2573,7 @@
         },
         {
           "jp": "見える／わかる",
-          "hint": "覚え方：シー",
+          "hint": "発音：シー",
           "say": "see",
           "pool": [
             "want",
@@ -2606,7 +2606,7 @@
         },
         {
           "jp": "（注意して）見る",
-          "hint": "覚え方：ウォッチ",
+          "hint": "発音：ウォッチ",
           "say": "watch",
           "pool": [
             "want",
@@ -2639,7 +2639,7 @@
         },
         {
           "jp": "会う",
-          "hint": "覚え方：ミート",
+          "hint": "発音：ミート",
           "say": "meet",
           "pool": [
             "want",
@@ -2672,7 +2672,7 @@
         },
         {
           "jp": "取る",
-          "hint": "覚え方：テイク",
+          "hint": "発音：テイク",
           "say": "take",
           "pool": [
             "want",
@@ -2705,7 +2705,7 @@
         },
         {
           "jp": "考える",
-          "hint": "覚え方：シンク",
+          "hint": "発音：シンク",
           "say": "think",
           "pool": [
             "want",
@@ -2738,7 +2738,7 @@
         },
         {
           "jp": "走る",
-          "hint": "覚え方：ラン",
+          "hint": "発音：ラン",
           "say": "run",
           "pool": [
             "want",
@@ -2771,7 +2771,7 @@
         },
         {
           "jp": "歌う",
-          "hint": "覚え方：シング",
+          "hint": "発音：シング",
           "say": "sing",
           "pool": [
             "want",
@@ -2804,7 +2804,7 @@
         },
         {
           "jp": "（絵を）かく",
-          "hint": "覚え方：ドロー",
+          "hint": "発音：ドロー",
           "say": "draw",
           "pool": [
             "want",
@@ -2837,7 +2837,7 @@
         },
         {
           "jp": "大好きである",
-          "hint": "覚え方：ラブ",
+          "hint": "発音：ラブ",
           "say": "love",
           "pool": [
             "want",
@@ -2870,7 +2870,7 @@
         },
         {
           "jp": "呼ぶ",
-          "hint": "覚え方：コール",
+          "hint": "発音：コール",
           "say": "call",
           "pool": [
             "want",
@@ -2903,7 +2903,7 @@
         },
         {
           "jp": "よい",
-          "hint": "覚え方：グッド",
+          "hint": "発音：グッド",
           "say": "good",
           "pool": [
             "want",
@@ -2936,7 +2936,7 @@
         },
         {
           "jp": "すてきな",
-          "hint": "覚え方：ナイス",
+          "hint": "発音：ナイス",
           "say": "nice",
           "pool": [
             "want",
@@ -2969,7 +2969,7 @@
         },
         {
           "jp": "新しい",
-          "hint": "覚え方：ニュー",
+          "hint": "発音：ニュー",
           "say": "new",
           "pool": [
             "want",
@@ -3002,7 +3002,7 @@
         },
         {
           "jp": "かっこいい",
-          "hint": "覚え方：クール",
+          "hint": "発音：クール",
           "say": "cool",
           "pool": [
             "want",
@@ -3035,7 +3035,7 @@
         },
         {
           "jp": "かわいい",
-          "hint": "覚え方：キュート",
+          "hint": "発音：キュート",
           "say": "cute",
           "pool": [
             "want",
@@ -3068,7 +3068,7 @@
         },
         {
           "jp": "すばらしい",
-          "hint": "覚え方：グレート",
+          "hint": "発音：グレート",
           "say": "great",
           "pool": [
             "want",
@@ -3101,7 +3101,7 @@
         },
         {
           "jp": "強い",
-          "hint": "覚え方：ストロング",
+          "hint": "発音：ストロング",
           "say": "strong",
           "pool": [
             "want",
@@ -3134,7 +3134,7 @@
         },
         {
           "jp": "暑い／熱い",
-          "hint": "覚え方：ホット",
+          "hint": "発音：ホット",
           "say": "hot",
           "pool": [
             "want",
@@ -3167,7 +3167,7 @@
         },
         {
           "jp": "白い",
-          "hint": "覚え方：ホワイト",
+          "hint": "発音：ホワイト",
           "say": "white",
           "pool": [
             "want",
@@ -3200,7 +3200,7 @@
         },
         {
           "jp": "黒い",
-          "hint": "覚え方：ブラック",
+          "hint": "発音：ブラック",
           "say": "black",
           "pool": [
             "want",
@@ -3233,7 +3233,7 @@
         },
         {
           "jp": "赤い",
-          "hint": "覚え方：レッド",
+          "hint": "発音：レッド",
           "say": "red",
           "pool": [
             "want",
@@ -3269,11 +3269,11 @@
     "num_e2j": {
       "label": "⑤ 数字　英→日",
       "icon": "🔢",
-      "description": "数を英語で覚えよう",
+      "description": "",
       "questions": [
         {
           "jp": "zero",
-          "hint": "覚え方：ゼロ",
+          "hint": "発音：ゼロ",
           "say": "zero",
           "sayPrompt": true,
           "pool": [
@@ -3298,7 +3298,7 @@
         },
         {
           "jp": "one",
-          "hint": "覚え方：ワン",
+          "hint": "発音：ワン",
           "say": "one",
           "sayPrompt": true,
           "pool": [
@@ -3323,7 +3323,7 @@
         },
         {
           "jp": "two",
-          "hint": "覚え方：トゥー",
+          "hint": "発音：トゥー",
           "say": "two",
           "sayPrompt": true,
           "pool": [
@@ -3348,7 +3348,7 @@
         },
         {
           "jp": "three",
-          "hint": "覚え方：スリー",
+          "hint": "発音：スリー",
           "say": "three",
           "sayPrompt": true,
           "pool": [
@@ -3373,7 +3373,7 @@
         },
         {
           "jp": "four",
-          "hint": "覚え方：フォー",
+          "hint": "発音：フォー",
           "say": "four",
           "sayPrompt": true,
           "pool": [
@@ -3398,7 +3398,7 @@
         },
         {
           "jp": "five",
-          "hint": "覚え方：ファイブ",
+          "hint": "発音：ファイブ",
           "say": "five",
           "sayPrompt": true,
           "pool": [
@@ -3423,7 +3423,7 @@
         },
         {
           "jp": "six",
-          "hint": "覚え方：シックス",
+          "hint": "発音：シックス",
           "say": "six",
           "sayPrompt": true,
           "pool": [
@@ -3448,7 +3448,7 @@
         },
         {
           "jp": "seven",
-          "hint": "覚え方：セブン",
+          "hint": "発音：セブン",
           "say": "seven",
           "sayPrompt": true,
           "pool": [
@@ -3473,7 +3473,7 @@
         },
         {
           "jp": "eight",
-          "hint": "覚え方：エイト",
+          "hint": "発音：エイト",
           "say": "eight",
           "sayPrompt": true,
           "pool": [
@@ -3498,7 +3498,7 @@
         },
         {
           "jp": "nine",
-          "hint": "覚え方：ナイン",
+          "hint": "発音：ナイン",
           "say": "nine",
           "sayPrompt": true,
           "pool": [
@@ -3523,7 +3523,7 @@
         },
         {
           "jp": "ten",
-          "hint": "覚え方：テン",
+          "hint": "発音：テン",
           "say": "ten",
           "sayPrompt": true,
           "pool": [
@@ -3548,7 +3548,7 @@
         },
         {
           "jp": "eleven",
-          "hint": "覚え方：イレブン",
+          "hint": "発音：イレブン",
           "say": "eleven",
           "sayPrompt": true,
           "pool": [
@@ -3573,7 +3573,7 @@
         },
         {
           "jp": "twelve",
-          "hint": "覚え方：トゥエルブ",
+          "hint": "発音：トゥエルブ",
           "say": "twelve",
           "sayPrompt": true,
           "pool": [
@@ -3598,7 +3598,7 @@
         },
         {
           "jp": "thirteen",
-          "hint": "覚え方：サーティーン",
+          "hint": "発音：サーティーン",
           "say": "thirteen",
           "sayPrompt": true,
           "pool": [
@@ -3623,7 +3623,7 @@
         },
         {
           "jp": "twenty",
-          "hint": "覚え方：トゥエンティ",
+          "hint": "発音：トゥエンティ",
           "say": "twenty",
           "sayPrompt": true,
           "pool": [
@@ -3648,7 +3648,7 @@
         },
         {
           "jp": "hundred",
-          "hint": "覚え方：ハンドレッド",
+          "hint": "発音：ハンドレッド",
           "say": "hundred",
           "sayPrompt": true,
           "pool": [

@@ -93,7 +93,7 @@ def e2j_mode(label, icon, desc, words):
     for (en, jp, ro) in words:
         qs.append({
             "jp": en,
-            "hint": "覚え方：" + ro,
+            "hint": "発音：" + ro,
             "say": en,
             "sayPrompt": True,
             "pool": pool,
@@ -109,7 +109,7 @@ def j2e_mode(label, icon, desc, words):
     for (en, jp, ro) in words:
         qs.append({
             "jp": jp,
-            "hint": "覚え方：" + ro,
+            "hint": "発音：" + ro,
             "say": en,
             "pool": pool,
             "answer": en,
@@ -122,11 +122,11 @@ data = {
     "subtitle": "よく使う単語から覚えよう｜🔊音声つき",
     "icon": "📗",
     "modes": {
-        "core1_e2j": e2j_mode("① きほんの単語　英→日", "📗", "英語を見て意味をえらぼう", tier1),
-        "core1_j2e": j2e_mode("② きほんの単語　日→英", "📙", "意味を見て英語をえらぼう", tier1),
-        "core2_e2j": e2j_mode("③ よく使う語　英→日", "📗", "動詞・形容詞など", tier2),
-        "core2_j2e": j2e_mode("④ よく使う語　日→英", "📙", "動詞・形容詞など", tier2),
-        "num_e2j": e2j_mode("⑤ 数字　英→日", "🔢", "数を英語で覚えよう", nums),
+        "core1_e2j": e2j_mode("① きほんの単語　英→日", "📗", "", tier1),
+        "core1_j2e": j2e_mode("② きほんの単語　日→英", "📙", "", tier1),
+        "core2_e2j": e2j_mode("③ よく使う語　英→日", "📗", "", tier2),
+        "core2_j2e": j2e_mode("④ よく使う語　日→英", "📙", "", tier2),
+        "num_e2j": e2j_mode("⑤ 数字　英→日", "🔢", "", nums),
     },
 }
 
