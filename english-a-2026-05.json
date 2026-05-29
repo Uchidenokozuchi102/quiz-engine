@@ -1,10 +1,10 @@
 {
-  "title": "中1 英単語 きほんドリル",
+  "title": "中1 英単語 基本ドリル",
   "subtitle": "よく使う単語から覚えよう｜🔊音声つき",
   "icon": "📗",
   "modes": {
     "core1_e2j": {
-      "label": "① きほんの単語　英→日",
+      "label": "① 基本の単語　英→日",
       "icon": "📗",
       "description": "",
       "questions": [
@@ -803,7 +803,7 @@
       ]
     },
     "core1_j2e": {
-      "label": "② きほんの単語　日→英",
+      "label": "② 基本の単語　日→英",
       "icon": "📙",
       "description": "",
       "questions": [

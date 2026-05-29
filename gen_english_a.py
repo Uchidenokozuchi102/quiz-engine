@@ -118,12 +118,12 @@ def j2e_mode(label, icon, desc, words):
 
 
 data = {
-    "title": "中1 英単語 きほんドリル",
+    "title": "中1 英単語 基本ドリル",
     "subtitle": "よく使う単語から覚えよう｜🔊音声つき",
     "icon": "📗",
     "modes": {
-        "core1_e2j": e2j_mode("① きほんの単語　英→日", "📗", "", tier1),
-        "core1_j2e": j2e_mode("② きほんの単語　日→英", "📙", "", tier1),
+        "core1_e2j": e2j_mode("① 基本の単語　英→日", "📗", "", tier1),
+        "core1_j2e": j2e_mode("② 基本の単語　日→英", "📙", "", tier1),
         "core2_e2j": e2j_mode("③ よく使う語　英→日", "📗", "", tier2),
         "core2_j2e": j2e_mode("④ よく使う語　日→英", "📙", "", tier2),
         "num_e2j": e2j_mode("⑤ 数字　英→日", "🔢", "", nums),
