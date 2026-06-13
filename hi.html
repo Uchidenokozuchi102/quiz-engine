@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 教科別の表紙ページ。LINE等のプレビュー用クローラーはJSを実行せず下のOGPだけを読む。
+         生徒名は入れない（生徒ごとに別ファイルだが、ここはあくまで「教科のタイトル」を出すための表紙）。
+         人間はクイズ本体(index.html)へ即転送される。タイトルを変えたい時はこの4行だけ直す。 -->
+    <title>日本史 古代 期末対策</title>
+    <meta name="description" content="古墳時代〜飛鳥時代（古代No.6・No.7）のテスト対策クイズ。">
+    <meta property="og:title" content="日本史 古代 期末対策">
+    <meta property="og:description" content="古墳時代〜飛鳥時代（古代No.6・No.7）のテスト対策クイズ。">
+    <meta property="og:type" content="website">
+    <script>location.replace('/?data=history-2026-06.json');</script>
+    <style>
+        body { margin: 0; background: #0d0d14; color: #9a9484; font-family: 'Noto Sans JP', sans-serif; }
+        .c { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100dvh; gap: 14px; text-align: center; padding: 20px; }
+        a { color: #c9a44a; }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div>読み込み中…</div>
+        <div>開かない場合は <a href="/?data=history-2026-06.json">こちらをタップ</a></div>
+    </div>
+</body>
+
+</html>

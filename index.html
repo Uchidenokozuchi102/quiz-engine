@@ -82,22 +82,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: safe center;
             height: 100%;
             text-align: center;
-            gap: 20px
+            gap: 14px;
+            padding: 16px 0
         }
 
         .logo-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 24px;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
             background: linear-gradient(135deg, var(--secondary), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
-            margin: 0 auto 20px;
+            font-size: 34px;
+            margin: 0 auto 10px;
             box-shadow: 0 0 40px rgba(201, 164, 74, 0.3), 0 0 80px rgba(139, 105, 20, 0.2);
             animation: iconFloat 3s ease-in-out infinite
         }
@@ -127,15 +128,15 @@
         .mode-buttons {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
             max-width: 400px;
-            margin-top: 20px
+            margin-top: 12px
         }
 
         .mode-btn {
             position: relative;
-            padding: 18px 24px;
+            padding: 13px 20px;
             border: 1px solid var(--glass-border);
             border-radius: 16px;
             background: var(--bg-card);
@@ -164,8 +165,8 @@
         .mode-btn:hover::before, .mode-btn:active::before { opacity: 1 }
         .mode-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201, 164, 74, 0.15) }
 
-        .mode-btn-icon { font-size: 26px; margin-bottom: 6px }
-        .mode-btn-title { font-family: 'Orbitron', sans-serif; font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 4px }
+        .mode-btn-icon { font-size: 22px; margin-bottom: 3px }
+        .mode-btn-title { font-family: 'Orbitron', sans-serif; font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 2px }
         .mode-btn-desc { font-size: .8rem; color: var(--text-dim); font-weight: 300 }
 
         #quizScreen { display: none }
@@ -344,13 +345,13 @@
         }
 
         @media(max-height:700px) {
-            #startScreen { gap: 10px }
-            .logo-icon { width: 64px; height: 64px; font-size: 30px; margin-bottom: 10px; border-radius: 18px }
-            .main-title { font-size: 1.15rem }
-            .sub-title { font-size: .85rem; margin-top: 2px }
-            .mode-buttons { margin-top: 14px; gap: 10px }
-            .mode-btn { padding: 14px 20px }
-            .mode-btn-icon { font-size: 22px; margin-bottom: 4px }
+            #startScreen { gap: 8px; padding: 10px 0 }
+            .logo-icon { width: 56px; height: 56px; font-size: 28px; margin-bottom: 8px; border-radius: 16px }
+            .main-title { font-size: 1.1rem }
+            .sub-title { font-size: .82rem; margin-top: 2px }
+            .mode-buttons { margin-top: 10px; gap: 8px }
+            .mode-btn { padding: 11px 18px }
+            .mode-btn-icon { font-size: 20px; margin-bottom: 2px }
             .mode-btn-title { font-size: .85rem }
             .mode-btn-desc { font-size: .75rem }
         }

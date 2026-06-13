@@ -11,7 +11,7 @@
 # 極短キー（メイン）
 /en    /index.html   200
 /en-a  /index.html   200
-/hi    /index.html   200
+/hi    /hi.html      200
 /ph    /index.html   200
 
 # 後方互換（旧URL）
