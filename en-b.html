@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 教科別の表紙ページ。LINE等のプレビュー用クローラーはJSを実行せず下のOGPだけを読む。
-         生徒名は入れない（教科のタイトルだけを出す表紙）。人間はクイズ本体へ即転送される。
+    <!-- 海輝君 専用の表紙ページ（/en-b のリンク限定）。LINE等のクローラーはJSを実行せず下のOGPだけ読む。
+         この表紙は en-b リンク専用なので、ここに生徒名を入れても他クイズ・他生徒には影響しない
+         （共有 index.html のOGPは中立のまま）。人間はクイズ本体へ即転送される。
          タイトルを変えたい時はこの4行だけ直す。 -->
-    <title>英語 P20〜33 期末対策</title>
-    <meta name="description" content="中1英語 P20〜33の単語（期末テスト対策）。英→日・日→英の4択ドリル、音声つき。">
-    <meta property="og:title" content="英語 P20〜33 期末対策">
-    <meta property="og:description" content="中1英語 P20〜33の単語（期末テスト対策）。英→日・日→英の4択ドリル、音声つき。">
+    <title>英語P20～33 期末対策 海輝君</title>
+    <meta name="description" content="中1英語 P20〜33の単語（期末テスト対策）。4択ドリル・音声つき。">
+    <meta property="og:title" content="英語P20～33 期末対策 海輝君">
+    <meta property="og:description" content="中1英語 P20〜33の単語（期末テスト対策）。4択ドリル・音声つき。">
     <meta property="og:type" content="website">
     <script>location.replace('/?data=english-b-2026-06.json');</script>
     <style>

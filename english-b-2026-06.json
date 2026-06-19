@@ -6,11 +6,12 @@
     "verb": {
       "label": "① 動詞（最優先）",
       "icon": "🏃",
-      "description": "英語を見て意味をえらぶ",
+      "description": "",
       "questions": [
         {
           "jp": "can",
           "say": "can",
+          "audio": "/audio/en-b/can.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -30,6 +31,7 @@
         {
           "jp": "cannot",
           "say": "cannot",
+          "audio": "/audio/en-b/cannot.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -49,6 +51,7 @@
         {
           "jp": "make",
           "say": "make",
+          "audio": "/audio/en-b/make.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -68,6 +71,7 @@
         {
           "jp": "read",
           "say": "read",
+          "audio": "/audio/en-b/read.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -87,6 +91,7 @@
         {
           "jp": "see",
           "say": "see",
+          "audio": "/audio/en-b/see.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -106,6 +111,7 @@
         {
           "jp": "excuse",
           "say": "excuse",
+          "audio": "/audio/en-b/excuse.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -125,6 +131,7 @@
         {
           "jp": "thank",
           "say": "thank",
+          "audio": "/audio/en-b/thank.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -144,6 +151,7 @@
         {
           "jp": "are",
           "say": "are",
+          "audio": "/audio/en-b/are.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -163,6 +171,7 @@
         {
           "jp": "cook",
           "say": "cook",
+          "audio": "/audio/en-b/cook.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -182,6 +191,7 @@
         {
           "jp": "drink",
           "say": "drink",
+          "audio": "/audio/en-b/drink.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -201,6 +211,7 @@
         {
           "jp": "speak",
           "say": "speak",
+          "audio": "/audio/en-b/speak.mp3",
           "sayPrompt": true,
           "pool": [
             "…することができる",
@@ -222,11 +233,12 @@
     "adj": {
       "label": "② 形容詞（最優先）",
       "icon": "🎨",
-      "description": "英語を見て意味をえらぶ",
+      "description": "",
       "questions": [
         {
           "jp": "new",
           "say": "new",
+          "audio": "/audio/en-b/new.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -249,6 +261,7 @@
         {
           "jp": "cool",
           "say": "cool",
+          "audio": "/audio/en-b/cool.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -271,6 +284,7 @@
         {
           "jp": "good",
           "say": "good",
+          "audio": "/audio/en-b/good.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -293,6 +307,7 @@
         {
           "jp": "English",
           "say": "English",
+          "audio": "/audio/en-b/english.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -315,6 +330,7 @@
         {
           "jp": "Chinese",
           "say": "Chinese",
+          "audio": "/audio/en-b/chinese.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -337,6 +353,7 @@
         {
           "jp": "some",
           "say": "some",
+          "audio": "/audio/en-b/some.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -359,6 +376,7 @@
         {
           "jp": "welcome",
           "say": "welcome",
+          "audio": "/audio/en-b/welcome.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -381,6 +399,7 @@
         {
           "jp": "interesting",
           "say": "interesting",
+          "audio": "/audio/en-b/interesting.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -403,6 +422,7 @@
         {
           "jp": "favorite",
           "say": "favorite",
+          "audio": "/audio/en-b/favorite.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -425,6 +445,7 @@
         {
           "jp": "brave",
           "say": "brave",
+          "audio": "/audio/en-b/brave.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -447,6 +468,7 @@
         {
           "jp": "kind",
           "say": "kind",
+          "audio": "/audio/en-b/kind.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -469,6 +491,7 @@
         {
           "jp": "rainy",
           "say": "rainy",
+          "audio": "/audio/en-b/rainy.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -491,6 +514,7 @@
         {
           "jp": "green",
           "say": "green",
+          "audio": "/audio/en-b/green.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -513,6 +537,7 @@
         {
           "jp": "blue",
           "say": "blue",
+          "audio": "/audio/en-b/blue.mp3",
           "sayPrompt": true,
           "pool": [
             "新しい、新任の",
@@ -537,11 +562,12 @@
     "noun": {
       "label": "③ 名詞",
       "icon": "📦",
-      "description": "英語を見て意味をえらぶ",
+      "description": "",
       "questions": [
         {
           "jp": "class",
           "say": "class",
+          "audio": "/audio/en-b/class.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -578,6 +604,7 @@
         {
           "jp": "team",
           "say": "team",
+          "audio": "/audio/en-b/team.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -614,6 +641,7 @@
         {
           "jp": "food",
           "say": "food",
+          "audio": "/audio/en-b/food.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -650,6 +678,7 @@
         {
           "jp": "father",
           "say": "father",
+          "audio": "/audio/en-b/father.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -686,6 +715,7 @@
         {
           "jp": "teacher",
           "say": "teacher",
+          "audio": "/audio/en-b/teacher.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -722,6 +752,7 @@
         {
           "jp": "bird",
           "say": "bird",
+          "audio": "/audio/en-b/bird.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -758,6 +789,7 @@
         {
           "jp": "parent(s)",
           "say": "parents",
+          "audio": "/audio/en-b/parents.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -794,6 +826,7 @@
         {
           "jp": "tea",
           "say": "tea",
+          "audio": "/audio/en-b/tea.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -830,6 +863,7 @@
         {
           "jp": "rain",
           "say": "rain",
+          "audio": "/audio/en-b/rain.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -866,6 +900,7 @@
         {
           "jp": "glue",
           "say": "glue",
+          "audio": "/audio/en-b/glue.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -902,6 +937,7 @@
         {
           "jp": "fruit",
           "say": "fruit",
+          "audio": "/audio/en-b/fruit.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -938,6 +974,7 @@
         {
           "jp": "beef",
           "say": "beef",
+          "audio": "/audio/en-b/beef.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -974,6 +1011,7 @@
         {
           "jp": "sea",
           "say": "sea",
+          "audio": "/audio/en-b/sea.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1010,6 +1048,7 @@
         {
           "jp": "season",
           "say": "season",
+          "audio": "/audio/en-b/season.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1046,6 +1085,7 @@
         {
           "jp": "peach",
           "say": "peach",
+          "audio": "/audio/en-b/peach.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1082,6 +1122,7 @@
         {
           "jp": "beach",
           "say": "beach",
+          "audio": "/audio/en-b/beach.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1118,6 +1159,7 @@
         {
           "jp": "room",
           "say": "room",
+          "audio": "/audio/en-b/room.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1154,6 +1196,7 @@
         {
           "jp": "classroom",
           "say": "classroom",
+          "audio": "/audio/en-b/classroom.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1190,6 +1233,7 @@
         {
           "jp": "swimming pool",
           "say": "swimming pool",
+          "audio": "/audio/en-b/swimming_pool.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1226,6 +1270,7 @@
         {
           "jp": "cooking",
           "say": "cooking",
+          "audio": "/audio/en-b/cooking.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1262,6 +1307,7 @@
         {
           "jp": "textbook",
           "say": "textbook",
+          "audio": "/audio/en-b/textbook.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1298,6 +1344,7 @@
         {
           "jp": "notebook",
           "say": "notebook",
+          "audio": "/audio/en-b/notebook.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1334,6 +1381,7 @@
         {
           "jp": "green tea",
           "say": "green tea",
+          "audio": "/audio/en-b/green_tea.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1370,6 +1418,7 @@
         {
           "jp": "symbol",
           "say": "symbol",
+          "audio": "/audio/en-b/symbol.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1406,6 +1455,7 @@
         {
           "jp": "family",
           "say": "family",
+          "audio": "/audio/en-b/family.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1442,6 +1492,7 @@
         {
           "jp": "character",
           "say": "character",
+          "audio": "/audio/en-b/character.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1478,6 +1529,7 @@
         {
           "jp": "train",
           "say": "train",
+          "audio": "/audio/en-b/train.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1514,6 +1566,7 @@
         {
           "jp": "zoo",
           "say": "zoo",
+          "audio": "/audio/en-b/zoo.mp3",
           "sayPrompt": true,
           "pool": [
             "学級、組、クラス",
@@ -1552,11 +1605,12 @@
     "adv": {
       "label": "④ 副詞・会話表現",
       "icon": "💬",
-      "description": "英語を見て意味をえらぶ",
+      "description": "",
       "questions": [
         {
           "jp": "very",
           "say": "very",
+          "audio": "/audio/en-b/very.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1575,6 +1629,7 @@
         {
           "jp": "well",
           "say": "well",
+          "audio": "/audio/en-b/well.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1593,6 +1648,7 @@
         {
           "jp": "really",
           "say": "really",
+          "audio": "/audio/en-b/really.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1611,6 +1667,7 @@
         {
           "jp": "usually",
           "say": "usually",
+          "audio": "/audio/en-b/usually.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1629,6 +1686,7 @@
         {
           "jp": "today",
           "say": "today",
+          "audio": "/audio/en-b/today.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1647,6 +1705,7 @@
         {
           "jp": "also",
           "say": "also",
+          "audio": "/audio/en-b/also.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1665,6 +1724,7 @@
         {
           "jp": "why",
           "say": "why",
+          "audio": "/audio/en-b/why.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1683,6 +1743,7 @@
         {
           "jp": "I see.",
           "say": "I see",
+          "audio": "/audio/en-b/i_see.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1701,6 +1762,7 @@
         {
           "jp": "Excuse me.",
           "say": "Excuse me",
+          "audio": "/audio/en-b/excuse_me.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1719,6 +1781,7 @@
         {
           "jp": "be good at (...ing)",
           "say": "be good at",
+          "audio": "/audio/en-b/be_good_at.mp3",
           "sayPrompt": true,
           "pool": [
             "非常に、とても、あまり（…でない）",
@@ -1739,11 +1802,12 @@
     "review": {
       "label": "⑤ 仕上げ（書き＋ひっかけ）",
       "icon": "🎯",
-      "description": "動詞・形容詞を英語で／まちがえやすい2択",
+      "description": "",
       "questions": [
         {
           "jp": "…することができる",
           "say": "can",
+          "audio": "/audio/en-b/can.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1776,6 +1840,7 @@
         {
           "jp": "…できない",
           "say": "cannot",
+          "audio": "/audio/en-b/cannot.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1808,6 +1873,7 @@
         {
           "jp": "…を作る、得る",
           "say": "make",
+          "audio": "/audio/en-b/make.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1840,6 +1906,7 @@
         {
           "jp": "（…を）読む、読んで知る",
           "say": "read",
+          "audio": "/audio/en-b/read.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1872,6 +1939,7 @@
         {
           "jp": "（…が）わかる、理解する",
           "say": "see",
+          "audio": "/audio/en-b/see.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1904,6 +1972,7 @@
         {
           "jp": "…を許す",
           "say": "excuse",
+          "audio": "/audio/en-b/excuse.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1936,6 +2005,7 @@
         {
           "jp": "…に感謝する",
           "say": "thank",
+          "audio": "/audio/en-b/thank.mp3",
           "pool": [
             "can",
             "cannot",
@@ -1968,6 +2038,7 @@
         {
           "jp": "（…に）いる、ある",
           "say": "are",
+          "audio": "/audio/en-b/are.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2000,6 +2071,7 @@
         {
           "jp": "（…を）料理する",
           "say": "cook",
+          "audio": "/audio/en-b/cook.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2032,6 +2104,7 @@
         {
           "jp": "…を飲む",
           "say": "drink",
+          "audio": "/audio/en-b/drink.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2064,6 +2137,7 @@
         {
           "jp": "（ある言語）を話す",
           "say": "speak",
+          "audio": "/audio/en-b/speak.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2096,6 +2170,7 @@
         {
           "jp": "新しい、新任の",
           "say": "new",
+          "audio": "/audio/en-b/new.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2128,6 +2203,7 @@
         {
           "jp": "かっこいい",
           "say": "cool",
+          "audio": "/audio/en-b/cool.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2160,6 +2236,7 @@
         {
           "jp": "じょうずな、うまい",
           "say": "good",
+          "audio": "/audio/en-b/good.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2192,6 +2269,7 @@
         {
           "jp": "英語の、英語で書かれた",
           "say": "English",
+          "audio": "/audio/en-b/english.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2224,6 +2302,7 @@
         {
           "jp": "中国の",
           "say": "Chinese",
+          "audio": "/audio/en-b/chinese.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2256,6 +2335,7 @@
         {
           "jp": "いくつかの、いくらかの、少しの",
           "say": "some",
+          "audio": "/audio/en-b/some.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2288,6 +2368,7 @@
         {
           "jp": "歓迎される",
           "say": "welcome",
+          "audio": "/audio/en-b/welcome.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2320,6 +2401,7 @@
         {
           "jp": "おもしろい、興味深い",
           "say": "interesting",
+          "audio": "/audio/en-b/interesting.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2352,6 +2434,7 @@
         {
           "jp": "いちばん好きな、お気に入りの",
           "say": "favorite",
+          "audio": "/audio/en-b/favorite.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2384,6 +2467,7 @@
         {
           "jp": "勇かんな、勇ましい",
           "say": "brave",
+          "audio": "/audio/en-b/brave.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2416,6 +2500,7 @@
         {
           "jp": "親切な、やさしい",
           "say": "kind",
+          "audio": "/audio/en-b/kind.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2448,6 +2533,7 @@
         {
           "jp": "雨の、雨の多い",
           "say": "rainy",
+          "audio": "/audio/en-b/rainy.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2480,6 +2566,7 @@
         {
           "jp": "緑（の）",
           "say": "green",
+          "audio": "/audio/en-b/green.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2512,6 +2599,7 @@
         {
           "jp": "青（い）",
           "say": "blue",
+          "audio": "/audio/en-b/blue.mp3",
           "pool": [
             "can",
             "cannot",
@@ -2544,6 +2632,7 @@
         {
           "jp": "can",
           "say": "can",
+          "audio": "/audio/en-b/can.mp3",
           "sayPrompt": true,
           "choices": [
             "…することができる",
@@ -2554,6 +2643,7 @@
         {
           "jp": "cannot",
           "say": "cannot",
+          "audio": "/audio/en-b/cannot.mp3",
           "sayPrompt": true,
           "choices": [
             "…できない",
@@ -2564,6 +2654,7 @@
         {
           "jp": "rain",
           "say": "rain",
+          "audio": "/audio/en-b/rain.mp3",
           "sayPrompt": true,
           "choices": [
             "雨",
@@ -2574,6 +2665,7 @@
         {
           "jp": "rainy",
           "say": "rainy",
+          "audio": "/audio/en-b/rainy.mp3",
           "sayPrompt": true,
           "choices": [
             "雨の、雨の多い",
@@ -2584,6 +2676,7 @@
         {
           "jp": "cook",
           "say": "cook",
+          "audio": "/audio/en-b/cook.mp3",
           "sayPrompt": true,
           "choices": [
             "（…を）料理する",
@@ -2594,6 +2687,7 @@
         {
           "jp": "cooking",
           "say": "cooking",
+          "audio": "/audio/en-b/cooking.mp3",
           "sayPrompt": true,
           "choices": [
             "料理、料理法",
@@ -2604,6 +2698,7 @@
         {
           "jp": "tea",
           "say": "tea",
+          "audio": "/audio/en-b/tea.mp3",
           "sayPrompt": true,
           "choices": [
             "茶、紅茶",
@@ -2614,6 +2709,7 @@
         {
           "jp": "sea",
           "say": "sea",
+          "audio": "/audio/en-b/sea.mp3",
           "sayPrompt": true,
           "choices": [
             "海、海洋",
@@ -2624,6 +2720,7 @@
         {
           "jp": "peach",
           "say": "peach",
+          "audio": "/audio/en-b/peach.mp3",
           "sayPrompt": true,
           "choices": [
             "モモ",
@@ -2634,6 +2731,7 @@
         {
           "jp": "beach",
           "say": "beach",
+          "audio": "/audio/en-b/beach.mp3",
           "sayPrompt": true,
           "choices": [
             "浜、海辺、ビーチ",
@@ -2644,6 +2742,7 @@
         {
           "jp": "textbook",
           "say": "textbook",
+          "audio": "/audio/en-b/textbook.mp3",
           "sayPrompt": true,
           "choices": [
             "教科書",
@@ -2654,6 +2753,7 @@
         {
           "jp": "notebook",
           "say": "notebook",
+          "audio": "/audio/en-b/notebook.mp3",
           "sayPrompt": true,
           "choices": [
             "ノート",

@@ -12,7 +12,16 @@
 忠実性メモ: 意味は印刷のとおり。長い注釈ラベル(【所属】[正式名称…]等)は可読性のため省略。
   family は印刷表記どおり「一族」。
 """
-import json, os
+import json, os, re
+
+
+def slug(s):
+    """say文字列 → 音声ファイル名スラッグ（英小文字と数字、区切りは_）"""
+    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+
+
+def aud(say):
+    return "/audio/en-b/" + slug(say) + ".mp3"
 
 # (English, 日本語の意味, TTS読み上げ)
 verbs = [   # 動詞・助動詞（最優先）
@@ -107,19 +116,19 @@ traps = [
 ]
 
 
-def e2j(items):  # 英→日（意味えらび）
+def e2j(items):  # 英→日（意味えらび）出題時に音声
     pool = [ja for _, ja, _ in items]
-    return [{"jp": en, "say": say, "sayPrompt": True, "pool": pool, "answer": ja}
+    return [{"jp": en, "say": say, "audio": aud(say), "sayPrompt": True, "pool": pool, "answer": ja}
             for en, ja, say in items]
 
 
-def j2e(items):  # 日→英（英語えらび）
+def j2e(items):  # 日→英（英語えらび）回答後に音声
     pool = [en for en, _, _ in items]
-    return [{"jp": ja, "say": say, "pool": pool, "answer": en}
+    return [{"jp": ja, "say": say, "audio": aud(say), "pool": pool, "answer": en}
             for en, ja, say in items]
 
 
-trap_q = [{"jp": en, "say": say, "sayPrompt": True, "choices": [corr, wrong], "answer": corr}
+trap_q = [{"jp": en, "say": say, "audio": aud(say), "sayPrompt": True, "choices": [corr, wrong], "answer": corr}
           for en, corr, wrong, say in traps]
 
 # ⑤ 仕上げ: 動詞・形容詞の日→英（書きの確認）＋ ひっかけ2択
@@ -131,15 +140,15 @@ data = {
     "icon": "📖",
     "modes": {
         "verb": {"label": "① 動詞（最優先）", "icon": "🏃",
-                 "description": "英語を見て意味をえらぶ", "questions": e2j(verbs)},
+                 "description": "", "questions": e2j(verbs)},
         "adj": {"label": "② 形容詞（最優先）", "icon": "🎨",
-                "description": "英語を見て意味をえらぶ", "questions": e2j(adjs)},
+                "description": "", "questions": e2j(adjs)},
         "noun": {"label": "③ 名詞", "icon": "📦",
-                 "description": "英語を見て意味をえらぶ", "questions": e2j(nouns)},
+                 "description": "", "questions": e2j(nouns)},
         "adv": {"label": "④ 副詞・会話表現", "icon": "💬",
-                "description": "英語を見て意味をえらぶ", "questions": e2j(advs)},
+                "description": "", "questions": e2j(advs)},
         "review": {"label": "⑤ 仕上げ（書き＋ひっかけ）", "icon": "🎯",
-                   "description": "動詞・形容詞を英語で／まちがえやすい2択", "questions": review_q},
+                   "description": "", "questions": review_q},
     },
 }
 
