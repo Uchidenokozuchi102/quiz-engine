@@ -2,6 +2,12 @@
 # LINE/X等の内蔵ブラウザはキャッシュが強いので毎回サーバー問い合わせさせる
 # /* で全パス対象（rewrite経由のパスにも適用させるため）
 
+# 音声(MP3)は中身が変わらない(slug名のため不変)ので長期キャッシュOK。
+# より具体的なパスのCache-Controlが /* を上書きする＝音声だけキャッシュ可、HTML/JSONは従来どおり毎回取得。
+# 効果: 再生がネット待ちゼロで即時化、繰り返し開いても速い、通信量削減。
+/audio/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /*
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache

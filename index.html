@@ -465,6 +465,7 @@
             <div class="mode-buttons">${modesHtml}</div>`;
 
             document.getElementById('quizScreen').style.display = 'none';
+            preloadAllAudio(quizData); // スタート画面表示中に全音声を先読み→以降の再生は即時
         }
 
         // --- ユーティリティ ---
@@ -491,7 +492,8 @@
             if (!q) return;
             if (q.audio) {
                 try {
-                    __audioEl.src = q.audio;
+                    // 先読み済み(メモリ上のblob)があればそれを使う＝ネット待ちゼロで即再生。無ければ通常URL。
+                    __audioEl.src = __audioCache[q.audio] || q.audio;
                     __audioEl.currentTime = 0;
                     const p = __audioEl.play();
                     if (p && p.catch) p.catch(() => { if (q.say) speak(q.say); });
@@ -499,6 +501,23 @@
                 } catch (e) { if (q.say) speak(q.say); return; }
             }
             if (q.say) speak(q.say);
+        }
+
+        // --- 音声の事前読み込み: 全モードのMP3を起動時にメモリ(blob)へ取り込む。
+        //     これで問題が切り替わった瞬間に遅延なく即再生できる（毎回のネット取得待ち=1〜2秒をなくす）。 ---
+        const __audioCache = {}; // 元URL -> objectURL（メモリ上のblob）
+        function preloadAllAudio(data) {
+            if (!data || !data.modes) return;
+            const urls = new Set();
+            for (const mode of Object.values(data.modes)) {
+                for (const q of (mode.questions || [])) { if (q.audio) urls.add(q.audio); }
+            }
+            urls.forEach(url => {
+                if (__audioCache[url]) return;
+                fetch(url).then(r => r.ok ? r.blob() : null)
+                    .then(b => { if (b) __audioCache[url] = URL.createObjectURL(b); })
+                    .catch(() => { });
+            });
         }
 
         // --- モード開始 ---
