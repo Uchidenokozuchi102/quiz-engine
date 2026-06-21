@@ -420,6 +420,19 @@
             const path = location.pathname.replace(/^\//, '').replace(/\/$/, '').toLowerCase();
             dataFile = pathMap[path] || 'sample-data.json';
         }
+        // 短縮URLの表紙から ?data= で転送されて来た場合、アドレスバーを短縮キーへ戻す。
+        // これをしないと、転送後にアドレスバーが ?data=... の長いURLに変わり、それをコピーして
+        // LINE共有すると中立OGP（StudyDay）になる事故が起きる（生徒名つきプレビューが出ない）。
+        // 表紙ページを持つキーだけ対象＝戻した先URLでも正しい生徒名つきプレビューが出る。
+        const coverKeyByData = {
+            'english-b-2026-06.json': 'en-b',
+            'english-c-2026-06.json': 'en-c',
+            'history-2026-06.json': 'hi',
+        };
+        const _qdata = params.get('data');
+        if (_qdata && coverKeyByData[_qdata] && history.replaceState) {
+            history.replaceState(null, '', '/' + coverKeyByData[_qdata]);
+        }
         const fetchUrl = dataFile + (dataFile.includes('?') ? '&' : '?') + 'v=' + QUIZ_VERSION;
 
         fetch(fetchUrl)
