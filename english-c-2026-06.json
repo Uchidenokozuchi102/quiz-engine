@@ -1,6 +1,6 @@
 {
   "title": "英語 P22〜41 期末対策",
-  "subtitle": "中1 期末の新出を中心に（中間はおさらい）｜🔊音声つき",
+  "subtitle": "中1 期末範囲・新出を中心に｜🔊音声つき",
   "icon": "📖",
   "modes": {
     "newav": {
@@ -236,9 +236,9 @@
         }
       ]
     },
-    "review": {
-      "label": "④ 中間のおさらい（復習）",
-      "icon": "🔁",
+    "other": {
+      "label": "④ その他",
+      "icon": "📋",
       "description": "",
       "questions": [
         {

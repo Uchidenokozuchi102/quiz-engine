@@ -6,7 +6,8 @@
       （inbox 1000103352/354/356/357.jpg）を Opus が読取り、Codex でダブルチェック。
 
 方針（2026-06-21 オーナー確定）:
-  - 「新出（Unit 3）中心 ＋ 中間範囲（Unit 2）は"おさらい"の別モード」。
+  - 「新出（Unit 3）を最優先 ＋ 期末範囲のその他の語（P.22〜・Unit 2 ぶん）は別モード「その他」」。
+    ※ Chinese 以降も P.22〜で期末テスト範囲内（中間で既習なだけ）。"復習/おさらい"表記は誤解を招くので「その他」にする（2026-06-22 オーナー指摘）。
   - 単語が苦手な子向けに重要語へ絞り、品詞別＋動詞・形容詞優先（海輝君 en-b と同じ思想）。
   - 範囲外として除外（オーナー指示）: class / our / Canada / America / be good at / he's / she's。
   - 絞りで落とすもの: 固有名詞(China)・短縮形(that's/can't/you're/it's/what's/who's/when's/where's)・
@@ -53,8 +54,8 @@ new_adv = [  # 新出 副詞・前置詞・会話表現
     ("Good luck.", "がんばって。幸運を祈ります。", "Good luck"),
 ]
 
-# ───────── 中間範囲（Unit 2）＝おさらい ─────────
-review_mid = [
+# ───────── その他（期末範囲 P.22〜・Unit 2 ぶん。中間で既習だが期末範囲内） ─────────
+other_words = [
     ("Chinese", "中国の", "Chinese"),
     ("cannot", "…できない", "cannot"),
     ("some", "いくつかの、いくらかの、少しの", "some"),
@@ -109,7 +110,7 @@ review_q = j2e(finish_j2e) + trap_q
 
 data = {
     "title": "英語 P22〜41 期末対策",
-    "subtitle": "中1 期末の新出を中心に（中間はおさらい）｜🔊音声つき",
+    "subtitle": "中1 期末範囲・新出を中心に｜🔊音声つき",
     "icon": "📖",
     "modes": {
         "newav": {"label": "① 新出 動詞・形容詞（最優先）", "icon": "🏃",
@@ -118,8 +119,8 @@ data = {
                  "description": "", "questions": e2j(new_n)},
         "newadv": {"label": "③ 新出 副詞・前置詞・表現", "icon": "💬",
                    "description": "", "questions": e2j(new_adv)},
-        "review": {"label": "④ 中間のおさらい（復習）", "icon": "🔁",
-                   "description": "", "questions": e2j(review_mid)},
+        "other": {"label": "④ その他", "icon": "📋",
+                  "description": "", "questions": e2j(other_words)},
         "finish": {"label": "⑤ 仕上げ（書き＋ひっかけ）", "icon": "🎯",
                    "description": "", "questions": review_q},
     },
@@ -132,6 +133,6 @@ with open(out, "w", encoding="utf-8") as f:
 n_new = len(new_av) + len(new_n) + len(new_adv)
 print("written:", out)
 print(f"新出: 動詞形容詞{len(new_av)} 名詞{len(new_n)} 副詞前置詞表現{len(new_adv)} = {n_new}語")
-print(f"中間おさらい: {len(review_mid)}語")
+print(f"その他(P.22〜): {len(other_words)}語")
 print(f"⑤仕上げ: 日→英{len(finish_j2e)} + ひっかけ{len(trap_q)} = {len(review_q)}問")
-print(f"合計収録語(ユニーク): {n_new + len(review_mid)}語")
+print(f"合計収録語(ユニーク): {n_new + len(other_words)}語")
