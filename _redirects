@@ -16,6 +16,7 @@
 /hi    /hi.html      200
 /bn    /bn.html      200
 /ph    /index.html   200
+/ls    /listen.html  200
 
 # 後方互換（旧URL）
 /english     /index.html   200

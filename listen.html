@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>人狼英語 リスニング特訓</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐺</text></svg>">
+  <meta property="og:title" content="人狼英語 リスニング特訓">
+  <meta property="og:description" content="ワンナイト人狼の英語フレーズ102個を聴き取り練習">
+  <style>
+    :root{color-scheme:dark;--bg:#0d0d14;--panel:#16161f;--panel2:#20202b;--text:#e8e2d0;--muted:#aaa593;--gold:#c9a44a;--red:#c0504a;--green:#5a9a6e;--line:#34333d}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Noto Sans JP',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.55}
+    button,select{font:inherit;color:inherit}
+    button{min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:11px 14px;cursor:pointer;touch-action:manipulation}
+    button:disabled{opacity:.4;cursor:not-allowed}
+    button:focus-visible,select:focus-visible{outline:3px solid #c9a44a88;outline-offset:2px}
+    .app{width:min(100%,560px);min-height:100dvh;margin:auto;padding:18px 16px calc(28px + env(safe-area-inset-bottom))}
+    h1{margin:16px 0 6px;color:var(--gold);font-size:clamp(1.65rem,7vw,2.15rem);line-height:1.25;text-align:center}
+    h2{margin:8px 0 16px;font-size:1.35rem}.subtitle,.muted{color:var(--muted)}.subtitle{text-align:center;margin:0 0 24px}
+    .panel,.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0}
+    .summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:center}.summary strong{display:block;font-size:1.18rem}
+    .field{margin:14px 0}.field label{display:block;color:var(--muted);font-size:.9rem;margin-bottom:5px}
+    select{width:100%;min-height:48px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .mode-list{display:grid;gap:12px;margin-top:18px}.mode-btn{min-height:64px;text-align:left;font-size:1.1rem;font-weight:700;border-color:#5c5133;background:linear-gradient(135deg,#22202a,#1a1921)}
+    .empty{color:#e7a29d;text-align:center;min-height:1.5em}
+    .topbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;margin-bottom:12px}.topbar .count{text-align:center;font-weight:700}.home-btn{padding-inline:12px}
+    .speed{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0}.speed button{min-height:54px;padding:7px 4px;font-size:.78rem}.speed button.active{background:#5c4920;border-color:var(--gold);color:#fff2ca}
+    .prompt{text-align:center;padding:26px 12px}.ear{font-size:3rem;display:block;margin-bottom:9px}.play-btn{width:100%;border-color:#655a3b}
+    .answer{margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}.english{font-size:1.35rem;font-weight:700;line-height:1.4}.japanese{margin-top:8px;color:#d0cab9}.note{margin-top:10px;color:#d9bd73;font-size:.9rem}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.full{grid-column:1/-1;width:100%}.good{border-color:var(--green)}.bad{border-color:var(--red)}
+    .toggles{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}.toggle.on-miss{background:var(--red);border-color:#e07c74;color:white}.toggle.on-memo{background:var(--green);border-color:#80bd91;color:white}
+    .choice-list{display:grid;gap:10px;margin:16px 0}.choice{min-height:64px;text-align:left;font-size:1.04rem}.choice.correct{background:#315f40;border-color:#76b488}.choice.wrong{background:#713833;border-color:#dc776e}.choice.dim{opacity:.6}
+    .result{padding:14px;border-radius:12px;background:var(--panel2);margin:14px 0}.result.ok{border:1px solid var(--green)}.result.ng{border:1px solid var(--red)}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:9px}.complete{text-align:center;padding:24px 10px}.complete .big{font-size:1.6rem;color:var(--gold);font-weight:700}
+    .cat-title{position:sticky;top:0;z-index:2;background:#25212a;border-left:4px solid var(--gold);padding:9px 12px;margin:20px 0 8px;border-radius:4px;font-weight:700}
+    .phrase-row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px;margin:8px 0}.phrase-head{display:flex;align-items:flex-start;gap:8px}.phrase-text{flex:1;font-size:1.08rem;font-weight:650;cursor:pointer}.tier{flex:none;color:#d8bf7c;background:#3b3321;border-radius:6px;padding:2px 7px;font-size:.72rem}.row-actions{display:grid;grid-template-columns:52px 1fr 1fr;gap:7px;margin-top:10px}.row-actions button{padding:7px;min-height:46px}.row-jp[hidden]{display:none}
+    .loading{min-height:75dvh;display:grid;place-content:center;text-align:center}.loading strong{font-size:1.25rem;color:var(--gold)}.error{color:#f0a7a0}.toast{min-height:1.5em;text-align:center;color:#e6c978;font-size:.9rem;margin-top:8px}
+    @media (max-width:370px){.app{padding-inline:11px}.speed button{font-size:.7rem}.actions,.toggles{gap:6px}.english{font-size:1.2rem}}
+  </style>
+</head>
+<body>
+  <main id="app" class="app" aria-live="polite"></main>
+  <script>
+  'use strict';
+  (() => {
+    const STORAGE_KEY = 'jinrohListen.v1';
+    const DEFAULT_STATE = {flags:{}, pairStats:{}, speed:0.8, deck:{tier:'1', filter:'all', cat:'all'}};
+    const app = document.getElementById('app');
+    const audio = new Audio();
+    audio.preload = 'auto';
+    audio.preservesPitch = true;
+    audio.webkitPreservesPitch = true;
+    const blobUrls = new Map();
+    let data = null;
+    let state = loadState();
+    let currentView = 'loading';
+    let cardSession = null;
+    let pairSession = null;
+    let choiceSession = null;
+
+    function loadState() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        if (!raw || typeof raw !== 'object') return JSON.parse(JSON.stringify(DEFAULT_STATE));
+        return {
+          flags: raw.flags && typeof raw.flags === 'object' ? raw.flags : {},
+          pairStats: raw.pairStats && typeof raw.pairStats === 'object' ? raw.pairStats : {},
+          speed: [0.6,0.8,1].includes(Number(raw.speed)) ? Number(raw.speed) : 0.8,
+          deck: {
+            tier: ['1','2','3'].includes(String(raw.deck?.tier)) ? String(raw.deck.tier) : '1',
+            filter: ['all','miss','unmemo'].includes(raw.deck?.filter) ? raw.deck.filter : 'all',
+            cat: typeof raw.deck?.cat === 'string' ? raw.deck.cat : 'all'
+          }
+        };
+      } catch (_) {
+        try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+        return JSON.parse(JSON.stringify(DEFAULT_STATE));
+      }
+    }
+
+    function saveState() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
+    }
+
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    }
+
+    function shuffle(items) {
+      const out = [...items];
+      for (let i = out.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [out[i], out[j]] = [out[j], out[i]];
+      }
+      return out;
+    }
+
+    function getDeck() {
+      const maxTier = Number(state.deck.tier);
+      return data.phrases.filter(p => p.tier <= maxTier)
+        .filter(p => state.deck.cat === 'all' || p.cat === state.deck.cat)
+        .filter(p => state.deck.filter === 'all' ||
+          (state.deck.filter === 'miss' && state.flags[p.id]?.miss) ||
+          (state.deck.filter === 'unmemo' && !state.flags[p.id]?.memo));
+    }
+
+    function flagFor(id) {
+      if (!state.flags[id]) state.flags[id] = {miss:false, memo:false};
+      return state.flags[id];
+    }
+
+    function cleanFlag(id) {
+      const f = state.flags[id];
+      if (f && !f.miss && !f.memo) delete state.flags[id];
+    }
+
+    function toggleFlag(id, key) {
+      const f = flagFor(id);
+      f[key] = !f[key];
+      cleanFlag(id);
+      saveState();
+    }
+
+    function setMiss(id) {
+      flagFor(id).miss = true;
+      saveState();
+    }
+
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
+    function playAudio(url, statusId = 'play-status') {
+      stopAudio();
+      audio.src = blobUrls.get(url) || url;
+      audio.playbackRate = state.speed;
+      audio.preservesPitch = true;
+      audio.webkitPreservesPitch = true;
+      const promise = audio.play();
+      if (promise) promise.catch(() => {
+        const el = document.getElementById(statusId);
+        if (el) el.textContent = '自動再生できませんでした。「▶ もう一回」をタップしてください。';
+      });
+    }
+
+    function renderSpeed() {
+      return `<div class="speed" aria-label="再生速度">
+        <button data-speed="0.6" class="${state.speed===0.6?'active':''}">🐢超スロー<br>0.6</button>
+        <button data-speed="0.8" class="${state.speed===0.8?'active':''}">🚶ゆっくり<br>0.8</button>
+        <button data-speed="1" class="${state.speed===1?'active':''}">🏃ふつう<br>1.0</button>
+      </div>`;
+    }
+
+    function bindSpeed(replay) {
+      document.querySelectorAll('[data-speed]').forEach(btn => btn.addEventListener('click', () => {
+        state.speed = Number(btn.dataset.speed);
+        saveState();
+        document.querySelectorAll('[data-speed]').forEach(b => b.classList.toggle('active', Number(b.dataset.speed) === state.speed));
+        replay();
+      }));
+    }
+
+    function topbar(center, right = '') {
+      return `<div class="topbar"><button class="home-btn" id="home">← ホーム</button><div class="count">${center}</div><div>${right}</div></div>`;
+    }
+
+    function bindHome() {
+      document.getElementById('home')?.addEventListener('click', () => { stopAudio(); renderHome(); });
+    }
+
+    async function init() {
+      app.innerHTML = '<section class="loading"><div><strong>データを読み込み中…</strong></div></section>';
+      try {
+        const response = await fetch('listening-2026-07.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        data = await response.json();
+        if (!Array.isArray(data.phrases) || !Array.isArray(data.pairs)) throw new Error('データ形式が不正です');
+        const validCats = new Set(data.cats.map(c => c.key));
+        if (state.deck.cat !== 'all' && !validCats.has(state.deck.cat)) state.deck.cat = 'all';
+        saveState();
+        await preloadAudio();
+        renderHome();
+      } catch (err) {
+        app.innerHTML = `<section class="loading"><div><h1>人狼英語 リスニング特訓</h1><p class="error">読み込みに失敗しました。</p><p class="muted">${esc(err.message)}</p><button onclick="location.reload()">再読み込み</button></div></section>`;
+      }
+    }
+
+    async function preloadAudio() {
+      const urls = [...data.phrases.map(p => p.audio), ...data.pairs.flatMap(p => [p.a.audio, p.b.audio])];
+      let done = 0;
+      app.innerHTML = `<section class="loading"><div><strong id="load-progress">音声を準備中… 0/${urls.length}</strong><p class="muted">初回だけ少しお待ちください</p></div></section>`;
+      await Promise.all(urls.map(async url => {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error();
+          blobUrls.set(url, URL.createObjectURL(await response.blob()));
+        } catch (_) {
+          // Missing audio can still be retried by Audio when playback is requested.
+        } finally {
+          done++;
+          const progress = document.getElementById('load-progress');
+          if (progress) progress.textContent = `音声を準備中… ${done}/${urls.length}`;
+        }
+      }));
+    }
+
+    function renderHome() {
+      currentView = 'home';
+      const memo = data.phrases.filter(p => state.flags[p.id]?.memo).length;
+      const miss = data.phrases.filter(p => state.flags[p.id]?.miss).length;
+      const deckSize = getDeck().length;
+      const tierLabels = {'1':'Tier1だけ (44)','2':'Tier1+2 (88)','3':'全部 (102)'};
+      app.innerHTML = `<h1>人狼英語 リスニング特訓</h1><p class="subtitle">文字を見ずに聴く・口から出す</p>
+        <section class="summary"><div class="panel"><strong>✅暗記OK</strong>${memo} / ${data.phrases.length}</div><div class="panel"><strong>⚠️ミス中</strong>${miss}</div></section>
+        <section class="panel"><h2>デッキ設定</h2>
+          <div class="field"><label for="tier">レベル</label><select id="tier">${Object.entries(tierLabels).map(([v,l])=>`<option value="${v}" ${state.deck.tier===v?'selected':''}>${l}</option>`).join('')}</select></div>
+          <div class="field"><label for="filter">絞り込み</label><select id="filter"><option value="all">すべて</option><option value="miss" ${state.deck.filter==='miss'?'selected':''}>⚠️ミスだけ</option><option value="unmemo" ${state.deck.filter==='unmemo'?'selected':''}>未暗記だけ</option></select></div>
+          <div class="field"><label for="cat">カテゴリ</label><select id="cat"><option value="all">すべて</option>${data.cats.map(c=>`<option value="${esc(c.key)}" ${state.deck.cat===c.key?'selected':''}>${esc(c.jp)}</option>`).join('')}</select></div>
+          <p class="muted" id="deck-count">対象: ${deckSize}フレーズ</p>
+        </section>
+        <div class="mode-list">
+          <button class="mode-btn" data-mode="cards" ${deckSize?'':'disabled'}>🎧 聞き取りカード</button>
+          <button class="mode-btn" data-mode="pairs" ${deckSize?'':'disabled'}>👂 聞き分けドリル（単数複数など）</button>
+          <button class="mode-btn" data-mode="choices" ${deckSize?'':'disabled'}>❓ どの文？4択</button>
+          <button class="mode-btn" data-mode="list" ${deckSize?'':'disabled'}>📋 フレーズ一覧</button>
+        </div><p class="empty" id="empty">${deckSize?'':'該当フレーズがありません'}</p>`;
+      ['tier','filter','cat'].forEach(key => document.getElementById(key).addEventListener('change', e => {
+        state.deck[key] = e.target.value;
+        saveState();
+        renderHome();
+      }));
+      document.querySelector('[data-mode="cards"]')?.addEventListener('click', startCards);
+      document.querySelector('[data-mode="pairs"]')?.addEventListener('click', startPairs);
+      document.querySelector('[data-mode="choices"]')?.addEventListener('click', startChoices);
+      document.querySelector('[data-mode="list"]')?.addEventListener('click', renderList);
+    }
+
+    function startCards() {
+      const deck = getDeck();
+      if (!deck.length) return;
+      cardSession = {cards:shuffle(deck), index:0, ok:0, ng:0, revealed:false};
+      renderCard(true);
+    }
+
+    function renderCard(autoPlay = false) {
+      currentView = 'cards';
+      if (cardSession.index >= cardSession.cards.length) return renderCardComplete();
+      const p = cardSession.cards[cardSession.index];
+      const f = state.flags[p.id] || {};
+      app.innerHTML = `${topbar(`${cardSession.index+1} / ${cardSession.cards.length}`)}${renderSpeed()}
+        <section class="card"><div class="prompt"><span class="ear">🎧</span><strong>音声を聴いてください</strong></div>
+          <button class="play-btn" id="replay">▶ もう一回</button><div class="toast" id="play-status"></div>
+          <div id="answer-area">${cardSession.revealed ? answerMarkup(p) : '<button class="full" id="reveal">答えを見る</button>'}</div>
+        </section>
+        <div class="toggles"><button id="miss" class="toggle ${f.miss?'on-miss':''}">⚠️ミス</button><button id="memo" class="toggle ${f.memo?'on-memo':''}">✅暗記OK</button></div>`;
+      const replay = () => playAudio(p.audio);
+      bindHome(); bindSpeed(replay);
+      document.getElementById('replay').addEventListener('click', replay);
+      document.getElementById('reveal')?.addEventListener('click', () => { cardSession.revealed = true; renderCard(); });
+      bindCardJudgment();
+      document.getElementById('miss').addEventListener('click', () => { toggleFlag(p.id,'miss'); renderCard(); });
+      document.getElementById('memo').addEventListener('click', () => { toggleFlag(p.id,'memo'); renderCard(); });
+      if (autoPlay) replay();
+    }
+
+    function answerMarkup(p) {
+      return `<div class="answer"><div class="english">${esc(p.en)}</div><div class="japanese">${esc(p.jp)}</div>${p.note?`<div class="note">💡 ${esc(p.note)}</div>`:''}
+        <div class="actions"><button class="good" id="card-ok">○ 聞き取れた</button><button class="bad" id="card-ng">× ダメだった</button></div></div>`;
+    }
+
+    function bindCardJudgment() {
+      document.getElementById('card-ok')?.addEventListener('click', () => { cardSession.ok++; nextCard(); });
+      document.getElementById('card-ng')?.addEventListener('click', () => { cardSession.ng++; setMiss(cardSession.cards[cardSession.index].id); nextCard(); });
+    }
+
+    function nextCard() { stopAudio(); cardSession.index++; cardSession.revealed=false; renderCard(true); }
+
+    function renderCardComplete() {
+      app.innerHTML = `${topbar('聞き取りカード')}<section class="panel complete"><div class="big">一周完了！</div><p>○=${cardSession.ok}　×=${cardSession.ng}</p><div class="actions"><button id="again">もう一周</button><button id="done">ホームへ</button></div></section>`;
+      bindHome();
+      document.getElementById('again').addEventListener('click', startCards);
+      document.getElementById('done').addEventListener('click', renderHome);
+    }
+
+    function startPairs() {
+      pairSession = {queue:shuffle(data.pairs), index:0, target:null, answered:false, selected:null};
+      preparePair();
+    }
+
+    function preparePair() {
+      if (pairSession.index >= pairSession.queue.length) { pairSession.queue=shuffle(data.pairs); pairSession.index=0; }
+      pairSession.target = Math.random() < .5 ? 'a' : 'b';
+      pairSession.answered = false; pairSession.selected = null;
+      renderPair();
+    }
+
+    function renderPair() {
+      currentView = 'pairs';
+      const pair = pairSession.queue[pairSession.index];
+      const stats = state.pairStats[pair.id] || {ok:0,ng:0};
+      const total = stats.ok + stats.ng;
+      app.innerHTML = `${topbar(`このペアの正答率: ${stats.ok}/${total}`)}${renderSpeed()}
+        <section class="card"><div class="prompt"><span class="ear">👂</span><strong>どちらに聞こえましたか？</strong></div><button class="play-btn" id="replay">▶ もう一回</button><div class="toast" id="play-status"></div></section>
+        <div class="choice-list"><button class="choice" data-pair-choice="a">A. ${esc(pair.a.en)}</button><button class="choice" data-pair-choice="b">B. ${esc(pair.b.en)}</button></div>
+        ${pairSession.answered ? pairResultMarkup(pair) : ''}`;
+      const replay = () => playAudio(pair[pairSession.target].audio);
+      bindHome(); bindSpeed(replay);
+      document.getElementById('replay').addEventListener('click', replay);
+      document.querySelectorAll('[data-pair-choice]').forEach(btn => {
+        const choice = btn.dataset.pairChoice;
+        if (pairSession.answered) {
+          btn.disabled = true;
+          btn.classList.add(choice === pairSession.target ? 'correct' : choice === pairSession.selected ? 'wrong' : 'dim');
+        } else btn.addEventListener('click', () => answerPair(choice));
+      });
+      document.getElementById('listen-a')?.addEventListener('click', () => playAudio(pair.a.audio,'compare-status'));
+      document.getElementById('listen-b')?.addEventListener('click', () => playAudio(pair.b.audio,'compare-status'));
+      document.getElementById('pair-next')?.addEventListener('click', () => { stopAudio(); pairSession.index++; preparePair(); });
+      if (!pairSession.answered) replay();
+    }
+
+    function answerPair(choice) {
+      if (pairSession.answered) return;
+      pairSession.answered = true; pairSession.selected = choice;
+      const pair = pairSession.queue[pairSession.index];
+      const stats = state.pairStats[pair.id] || (state.pairStats[pair.id]={ok:0,ng:0});
+      stats[choice === pairSession.target ? 'ok' : 'ng']++;
+      saveState(); renderPair();
+    }
+
+    function pairResultMarkup(pair) {
+      const ok = pairSession.selected === pairSession.target;
+      return `<section class="result ${ok?'ok':'ng'}"><strong>${ok?'○ 正解！':'× 不正解'}</strong><p>${esc(pair.jp)}</p>
+        <div class="compare"><button id="listen-a">▶ Aを聞く</button><button id="listen-b">▶ Bを聞く</button></div><div class="toast" id="compare-status"></div><button class="full" id="pair-next">次へ</button></section>`;
+    }
+
+    function startChoices() {
+      const deck = getDeck();
+      if (!deck.length) return;
+      choiceSession = {deck, queue:shuffle(deck), index:0, correct:0, answered:0, selected:null, options:[]};
+      prepareChoice();
+    }
+
+    function prepareChoice() {
+      if (choiceSession.index >= choiceSession.queue.length) { choiceSession.queue=shuffle(choiceSession.deck); choiceSession.index=0; }
+      const target = choiceSession.queue[choiceSession.index];
+      const same = shuffle(data.phrases.filter(p => p.id !== target.id && p.cat === target.cat));
+      const other = shuffle(data.phrases.filter(p => p.id !== target.id && p.cat !== target.cat));
+      choiceSession.options = shuffle([target, ...same.slice(0,3), ...other].filter((p,i,a)=>a.findIndex(x=>x.id===p.id)===i).slice(0,4));
+      choiceSession.selected = null;
+      renderChoice();
+    }
+
+    function renderChoice() {
+      currentView = 'choices';
+      const target = choiceSession.queue[choiceSession.index];
+      const answered = choiceSession.selected !== null;
+      app.innerHTML = `${topbar(`セッション正答数 ${choiceSession.correct}/${choiceSession.answered}`)}${renderSpeed()}
+        <section class="card"><div class="prompt"><span class="ear">❓</span><strong>聞こえた文を選んでください</strong></div><button class="play-btn" id="replay">▶ もう一回</button><div class="toast" id="play-status"></div></section>
+        <div class="choice-list">${choiceSession.options.map(p=>`<button class="choice" data-choice="${esc(p.id)}">${esc(p.en)}</button>`).join('')}</div>
+        ${answered ? `<section class="result ${choiceSession.selected===target.id?'ok':'ng'}"><strong>${choiceSession.selected===target.id?'○ 正解！':'× 不正解'}</strong><div class="answer"><div class="english">${esc(target.en)}</div><div class="japanese">${esc(target.jp)}</div></div><button class="full" id="choice-next">次へ</button></section>` : ''}`;
+      const replay = () => playAudio(target.audio);
+      bindHome(); bindSpeed(replay);
+      document.getElementById('replay').addEventListener('click', replay);
+      document.querySelectorAll('[data-choice]').forEach(btn => {
+        const id=btn.dataset.choice;
+        if (answered) {
+          btn.disabled=true;
+          btn.classList.add(id===target.id?'correct':id===choiceSession.selected?'wrong':'dim');
+        } else btn.addEventListener('click',()=>answerChoice(id));
+      });
+      document.getElementById('choice-next')?.addEventListener('click',()=>{ stopAudio(); choiceSession.index++; prepareChoice(); });
+      if (!answered) replay();
+    }
+
+    function answerChoice(id) {
+      if (choiceSession.selected !== null) return;
+      const target = choiceSession.queue[choiceSession.index];
+      choiceSession.selected=id; choiceSession.answered++;
+      if (id===target.id) choiceSession.correct++; else setMiss(target.id);
+      renderChoice();
+    }
+
+    function renderList() {
+      currentView='list'; stopAudio();
+      const deck=getDeck();
+      const groups=data.cats.map(cat=>({cat,items:deck.filter(p=>p.cat===cat.key)})).filter(g=>g.items.length);
+      app.innerHTML=`${topbar(`フレーズ一覧 ${deck.length}件`)}${renderSpeed()}<div id="phrase-groups">${groups.map(g=>`<section><div class="cat-title">${esc(g.cat.jp)}（${g.items.length}）</div>${g.items.map(phraseRow).join('')}</section>`).join('')}</div>`;
+      bindHome(); bindSpeed(()=>{}); bindListRows();
+    }
+
+    function phraseRow(p) {
+      const f=state.flags[p.id]||{};
+      return `<article class="phrase-row" data-row="${esc(p.id)}"><div class="phrase-head"><div class="phrase-text" role="button" tabindex="0" aria-expanded="true">${esc(p.en)}</div><span class="tier">T${p.tier}</span></div><div class="japanese row-jp">${esc(p.jp)}</div>${p.note?`<div class="note">💡 ${esc(p.note)}</div>`:''}<div class="row-actions"><button data-row-play aria-label="再生">▶</button><button data-row-flag="miss" class="toggle ${f.miss?'on-miss':''}">⚠️</button><button data-row-flag="memo" class="toggle ${f.memo?'on-memo':''}">✅</button></div></article>`;
+    }
+
+    function bindListRows() {
+      document.querySelectorAll('[data-row]').forEach(row=>{
+        const p=data.phrases.find(x=>x.id===row.dataset.row);
+        const text=row.querySelector('.phrase-text');
+        const toggleTranslation=()=>{ const jp=row.querySelector('.row-jp'); jp.hidden=!jp.hidden; text.setAttribute('aria-expanded',String(!jp.hidden)); };
+        text.addEventListener('click',toggleTranslation);
+        text.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleTranslation();}});
+        row.querySelector('[data-row-play]').addEventListener('click',()=>playAudio(p.audio));
+        row.querySelectorAll('[data-row-flag]').forEach(btn=>btn.addEventListener('click',()=>{
+          toggleFlag(p.id,btn.dataset.rowFlag);
+          // 全体再描画するとスクロール位置が先頭に戻るため、ボタンの見た目だけその場で更新する
+          const f=state.flags[p.id]||{};
+          btn.classList.toggle('on-miss',btn.dataset.rowFlag==='miss'&&!!f.miss);
+          btn.classList.toggle('on-memo',btn.dataset.rowFlag==='memo'&&!!f.memo);
+        }));
+      });
+    }
+
+    window.addEventListener('beforeunload', () => {
+      stopAudio();
+      blobUrls.forEach(url => URL.revokeObjectURL(url));
+    });
+    init();
+  })();
+  </script>
+</body>
+</html>

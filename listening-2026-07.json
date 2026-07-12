@@ -1,0 +1,1113 @@
+{
+ "version": 1,
+ "updated": "2026-07-13",
+ "title": "人狼英語 リスニング特訓",
+ "cats": [
+  {
+   "key": "claim",
+   "jp": "役職CO"
+  },
+  {
+   "key": "night",
+   "jp": "夜の情報"
+  },
+  {
+   "key": "suspect",
+   "jp": "疑い"
+  },
+  {
+   "key": "question",
+   "jp": "質問"
+  },
+  {
+   "key": "defense",
+   "jp": "弁明"
+  },
+  {
+   "key": "vote",
+   "jp": "投票"
+  },
+  {
+   "key": "talk",
+   "jp": "会話・あいづち"
+  },
+  {
+   "key": "game",
+   "jp": "進行・結果"
+  }
+ ],
+ "phrases": [
+  {
+   "id": "c01",
+   "en": "I claim Seer.",
+   "jp": "占い師をCOします。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 1,
+   "audio": "/audio/ls/c01.mp3"
+  },
+  {
+   "id": "c02",
+   "en": "I claim Robber.",
+   "jp": "怪盗をCOします。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 1,
+   "audio": "/audio/ls/c02.mp3"
+  },
+  {
+   "id": "c03",
+   "en": "I'm a Villager.",
+   "jp": "私は村人です。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 1,
+   "audio": "/audio/ls/c03.mp3"
+  },
+  {
+   "id": "c04",
+   "en": "I'm not a werewolf.",
+   "jp": "私は人狼ではありません。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 1,
+   "audio": "/audio/ls/c04.mp3"
+  },
+  {
+   "id": "c05",
+   "en": "My role is Villager.",
+   "jp": "私の役職は村人です。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 1,
+   "audio": "/audio/ls/c05.mp3"
+  },
+  {
+   "id": "c06",
+   "en": "I claimed Seer first.",
+   "jp": "先に占い師をCOしたのは私です。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 2,
+   "audio": "/audio/ls/c06.mp3",
+   "note": "claimed の -ed（過去形）に注意"
+  },
+  {
+   "id": "c07",
+   "en": "Two people claimed Seer.",
+   "jp": "占い師COが2人います。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 2,
+   "audio": "/audio/ls/c07.mp3"
+  },
+  {
+   "id": "c08",
+   "en": "Nobody claimed Robber.",
+   "jp": "怪盗をCOした人はいません。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 2,
+   "audio": "/audio/ls/c08.mp3"
+  },
+  {
+   "id": "c09",
+   "en": "I was a Werewolf at first.",
+   "jp": "最初は人狼でした。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 2,
+   "audio": "/audio/ls/c09.mp3",
+   "note": "怪盗に交換された後の説明でよく出る"
+  },
+  {
+   "id": "c10",
+   "en": "I claim Madman.",
+   "jp": "狂人をCOします。",
+   "cat": "claim",
+   "catJp": "役職CO",
+   "tier": 2,
+   "audio": "/audio/ls/c10.mp3",
+   "note": "海外の定番One Night Ultimate WerewolfではMinionと呼ぶ"
+  },
+  {
+   "id": "n01",
+   "en": "I checked the center cards.",
+   "jp": "中央のカードを確認しました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n01.mp3",
+   "note": "cards の s まで聞く"
+  },
+  {
+   "id": "n02",
+   "en": "I checked two center cards.",
+   "jp": "中央のカードを2枚確認しました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n02.mp3"
+  },
+  {
+   "id": "n03",
+   "en": "I saw a werewolf.",
+   "jp": "人狼を1枚見ました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n03.mp3"
+  },
+  {
+   "id": "n04",
+   "en": "I saw two werewolves.",
+   "jp": "人狼を2枚見ました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n04.mp3",
+   "note": "wolves（複数形）の音の変化"
+  },
+  {
+   "id": "n05",
+   "en": "I swapped with Red.",
+   "jp": "Redさんとカードを交換しました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n05.mp3"
+  },
+  {
+   "id": "n06",
+   "en": "I checked Red's card.",
+   "jp": "Redさんのカードを確認しました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n06.mp3"
+  },
+  {
+   "id": "n07",
+   "en": "Red is a Villager.",
+   "jp": "Redさんは村人でした。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n07.mp3"
+  },
+  {
+   "id": "n08",
+   "en": "Red is a Werewolf.",
+   "jp": "Redさんは人狼でした。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 1,
+   "audio": "/audio/ls/n08.mp3"
+  },
+  {
+   "id": "n09",
+   "en": "There was a Tanner in the center.",
+   "jp": "中央に吊人がありました。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n09.mp3"
+  },
+  {
+   "id": "n10",
+   "en": "Both werewolves might be in the center.",
+   "jp": "人狼は2枚とも中央にあるかもしれません。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n10.mp3",
+   "note": "平和村の可能性の話でよく出る"
+  },
+  {
+   "id": "n11",
+   "en": "Maybe my card was swapped.",
+   "jp": "私のカードは交換されたかもしれません。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n11.mp3"
+  },
+  {
+   "id": "n12",
+   "en": "The Robber might have swapped my card.",
+   "jp": "怪盗が私のカードを交換したかもしれません。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n12.mp3"
+  },
+  {
+   "id": "n13",
+   "en": "I didn't swap any cards.",
+   "jp": "カードは交換しませんでした。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n13.mp3"
+  },
+  {
+   "id": "n14",
+   "en": "Now I'm a Villager.",
+   "jp": "今は村人になっています。",
+   "cat": "night",
+   "catJp": "夜の情報",
+   "tier": 2,
+   "audio": "/audio/ls/n14.mp3",
+   "note": "怪盗が交換後の自分を説明する言い方"
+  },
+  {
+   "id": "s01",
+   "en": "Red is suspicious.",
+   "jp": "Redさんが怪しいです。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 1,
+   "audio": "/audio/ls/s01.mp3",
+   "note": "suspicious はDay1で練習した単語"
+  },
+  {
+   "id": "s02",
+   "en": "I suspect Red.",
+   "jp": "Redさんを疑っています。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 1,
+   "audio": "/audio/ls/s02.mp3"
+  },
+  {
+   "id": "s03",
+   "en": "I think Red is lying.",
+   "jp": "Redさんは嘘をついていると思います。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 1,
+   "audio": "/audio/ls/s03.mp3"
+  },
+  {
+   "id": "s04",
+   "en": "That doesn't make sense.",
+   "jp": "それは筋が通りません。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 1,
+   "audio": "/audio/ls/s04.mp3"
+  },
+  {
+   "id": "s05",
+   "en": "I don't believe you.",
+   "jp": "あなたを信じられません。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 1,
+   "audio": "/audio/ls/s05.mp3"
+  },
+  {
+   "id": "s06",
+   "en": "You changed your story.",
+   "jp": "さっきと話が変わっていますよ。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 2,
+   "audio": "/audio/ls/s06.mp3"
+  },
+  {
+   "id": "s07",
+   "en": "You said something different before.",
+   "jp": "さっきは違うことを言っていました。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 2,
+   "audio": "/audio/ls/s07.mp3"
+  },
+  {
+   "id": "s08",
+   "en": "Why did you claim so late?",
+   "jp": "どうしてCOがそんなに遅かったのですか。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 2,
+   "audio": "/audio/ls/s08.mp3"
+  },
+  {
+   "id": "s09",
+   "en": "One of them is lying.",
+   "jp": "どちらかが嘘をついています。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 2,
+   "audio": "/audio/ls/s09.mp3",
+   "note": "占い師CO2人の時の定番"
+  },
+  {
+   "id": "s10",
+   "en": "Your story doesn't match.",
+   "jp": "あなたの話はつじつまが合いません。",
+   "cat": "suspect",
+   "catJp": "疑い",
+   "tier": 2,
+   "audio": "/audio/ls/s10.mp3"
+  },
+  {
+   "id": "q01",
+   "en": "Why do you suspect me?",
+   "jp": "どうして私を疑うのですか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q01.mp3"
+  },
+  {
+   "id": "q02",
+   "en": "What did you see?",
+   "jp": "何を見ましたか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q02.mp3"
+  },
+  {
+   "id": "q03",
+   "en": "Who did you check?",
+   "jp": "誰を確認しましたか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q03.mp3"
+  },
+  {
+   "id": "q04",
+   "en": "What's your role?",
+   "jp": "あなたの役職は何ですか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q04.mp3"
+  },
+  {
+   "id": "q05",
+   "en": "Are you the Seer?",
+   "jp": "あなたが占い師ですか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q05.mp3"
+  },
+  {
+   "id": "q06",
+   "en": "Who do you suspect?",
+   "jp": "誰を疑っていますか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 1,
+   "audio": "/audio/ls/q06.mp3"
+  },
+  {
+   "id": "q07",
+   "en": "What did you do at night?",
+   "jp": "夜に何をしましたか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 2,
+   "audio": "/audio/ls/q07.mp3"
+  },
+  {
+   "id": "q08",
+   "en": "Which cards did you check?",
+   "jp": "どのカードを確認しましたか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 2,
+   "audio": "/audio/ls/q08.mp3"
+  },
+  {
+   "id": "q09",
+   "en": "What do you think, Red?",
+   "jp": "Redさんはどう思いますか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 2,
+   "audio": "/audio/ls/q09.mp3"
+  },
+  {
+   "id": "q10",
+   "en": "Can you prove it?",
+   "jp": "それを証明できますか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 2,
+   "audio": "/audio/ls/q10.mp3"
+  },
+  {
+   "id": "q11",
+   "en": "Anyone else?",
+   "jp": "他にいませんか。",
+   "cat": "question",
+   "catJp": "質問",
+   "tier": 2,
+   "audio": "/audio/ls/q11.mp3",
+   "note": "短いので通常速度だと消えやすい"
+  },
+  {
+   "id": "d01",
+   "en": "I'm telling the truth.",
+   "jp": "本当のことを言っています。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 1,
+   "audio": "/audio/ls/d01.mp3"
+  },
+  {
+   "id": "d02",
+   "en": "Trust me.",
+   "jp": "信じてください。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 1,
+   "audio": "/audio/ls/d02.mp3"
+  },
+  {
+   "id": "d03",
+   "en": "It wasn't me.",
+   "jp": "私ではありません。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 1,
+   "audio": "/audio/ls/d03.mp3"
+  },
+  {
+   "id": "d04",
+   "en": "That's not true.",
+   "jp": "それは違います。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 1,
+   "audio": "/audio/ls/d04.mp3"
+  },
+  {
+   "id": "d05",
+   "en": "I can explain.",
+   "jp": "説明できます。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 1,
+   "audio": "/audio/ls/d05.mp3",
+   "note": "can が can't に聞こえないか注意"
+  },
+  {
+   "id": "d06",
+   "en": "I really am the Seer.",
+   "jp": "本当に占い師なんです。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 2,
+   "audio": "/audio/ls/d06.mp3"
+  },
+  {
+   "id": "d07",
+   "en": "I have no reason to lie.",
+   "jp": "嘘をつく理由がありません。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 2,
+   "audio": "/audio/ls/d07.mp3"
+  },
+  {
+   "id": "d08",
+   "en": "If I were a werewolf, I wouldn't say that.",
+   "jp": "もし私が人狼なら、そんなことは言いません。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 3,
+   "audio": "/audio/ls/d08.mp3",
+   "note": "長め。文の保持力トレーニング"
+  },
+  {
+   "id": "d09",
+   "en": "Please listen to me.",
+   "jp": "聞いてください。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 2,
+   "audio": "/audio/ls/d09.mp3"
+  },
+  {
+   "id": "d10",
+   "en": "I'm just a Villager, so I have no information.",
+   "jp": "ただの村人なので、情報はありません。",
+   "cat": "defense",
+   "catJp": "弁明",
+   "tier": 2,
+   "audio": "/audio/ls/d10.mp3"
+  },
+  {
+   "id": "v01",
+   "en": "Let's vote out Red.",
+   "jp": "Redさんに投票しましょう。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 1,
+   "audio": "/audio/ls/v01.mp3",
+   "note": "vote out = 投票で追放する（人狼の標準用語）"
+  },
+  {
+   "id": "v02",
+   "en": "I'll vote for Red.",
+   "jp": "私はRedさんに投票します。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 1,
+   "audio": "/audio/ls/v02.mp3"
+  },
+  {
+   "id": "v03",
+   "en": "Who are you voting for?",
+   "jp": "誰に投票しますか。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 1,
+   "audio": "/audio/ls/v03.mp3"
+  },
+  {
+   "id": "v04",
+   "en": "Don't vote for me.",
+   "jp": "私に投票しないでください。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 1,
+   "audio": "/audio/ls/v04.mp3"
+  },
+  {
+   "id": "v05",
+   "en": "I changed my mind.",
+   "jp": "気が変わりました。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 1,
+   "audio": "/audio/ls/v05.mp3"
+  },
+  {
+   "id": "v06",
+   "en": "Let's all vote for the same person.",
+   "jp": "全員で同じ人に投票しましょう。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 2,
+   "audio": "/audio/ls/v06.mp3"
+  },
+  {
+   "id": "v07",
+   "en": "I'm switching my vote to Blue.",
+   "jp": "投票先をBlueさんに変えます。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 2,
+   "audio": "/audio/ls/v07.mp3"
+  },
+  {
+   "id": "v08",
+   "en": "Are we ready to vote?",
+   "jp": "投票の準備はいいですか。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 2,
+   "audio": "/audio/ls/v08.mp3"
+  },
+  {
+   "id": "v09",
+   "en": "It's a tie.",
+   "jp": "同数です。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 2,
+   "audio": "/audio/ls/v09.mp3",
+   "note": "短い。tie（タイ）＝引き分け・同数"
+  },
+  {
+   "id": "v10",
+   "en": "Last chance to change your vote.",
+   "jp": "投票を変える最後のチャンスです。",
+   "cat": "vote",
+   "catJp": "投票",
+   "tier": 3,
+   "audio": "/audio/ls/v10.mp3"
+  },
+  {
+   "id": "t01",
+   "en": "Sorry, I didn't catch that.",
+   "jp": "すみません、聞き取れませんでした。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t01.mp3",
+   "note": "実戦で一番大事な保険フレーズ"
+  },
+  {
+   "id": "t02",
+   "en": "Can you say that again?",
+   "jp": "もう一度言ってもらえますか。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t02.mp3"
+  },
+  {
+   "id": "t03",
+   "en": "Can you speak more slowly?",
+   "jp": "もっとゆっくり話してもらえますか。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t03.mp3"
+  },
+  {
+   "id": "t04",
+   "en": "Got it.",
+   "jp": "わかりました。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t04.mp3",
+   "note": "短い定型。Day2で課題になった系統"
+  },
+  {
+   "id": "t05",
+   "en": "Wait a second.",
+   "jp": "ちょっと待ってください。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t05.mp3"
+  },
+  {
+   "id": "t06",
+   "en": "Let me think.",
+   "jp": "考えさせてください。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t06.mp3"
+  },
+  {
+   "id": "t07",
+   "en": "Anytime.",
+   "jp": "どういたしまして。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t07.mp3",
+   "note": "Day2で聞き取れなかった実績あり"
+  },
+  {
+   "id": "t08",
+   "en": "Great job.",
+   "jp": "よくできました。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 1,
+   "audio": "/audio/ls/t08.mp3",
+   "note": "Day2で聞き取れなかった実績あり"
+  },
+  {
+   "id": "t09",
+   "en": "I agree with Red.",
+   "jp": "Redさんに賛成です。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t09.mp3"
+  },
+  {
+   "id": "t10",
+   "en": "I disagree.",
+   "jp": "反対です。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t10.mp3"
+  },
+  {
+   "id": "t11",
+   "en": "That's a good point.",
+   "jp": "いい指摘ですね。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t11.mp3"
+  },
+  {
+   "id": "t12",
+   "en": "How about you?",
+   "jp": "あなたはどうですか。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t12.mp3"
+  },
+  {
+   "id": "t13",
+   "en": "Fair enough.",
+   "jp": "まあ、それもそうですね。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t13.mp3"
+  },
+  {
+   "id": "t14",
+   "en": "I take it back.",
+   "jp": "今のは取り消します。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 2,
+   "audio": "/audio/ls/t14.mp3"
+  },
+  {
+   "id": "t15",
+   "en": "You convinced me.",
+   "jp": "納得しました（説得されました）。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t15.mp3"
+  },
+  {
+   "id": "t16",
+   "en": "Nice bluff!",
+   "jp": "いいブラフでしたね！",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t16.mp3"
+  },
+  {
+   "id": "t17",
+   "en": "You got me.",
+   "jp": "やられました。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t17.mp3"
+  },
+  {
+   "id": "t18",
+   "en": "Well played.",
+   "jp": "お見事でした。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t18.mp3"
+  },
+  {
+   "id": "t19",
+   "en": "No hard feelings.",
+   "jp": "恨みっこなしですよ。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t19.mp3"
+  },
+  {
+   "id": "t20",
+   "en": "My gut says Red.",
+   "jp": "直感ではRedさんです。",
+   "cat": "talk",
+   "catJp": "会話・あいづち",
+   "tier": 3,
+   "audio": "/audio/ls/t20.mp3",
+   "note": "gut＝直感。カジュアル表現"
+  },
+  {
+   "id": "g01",
+   "en": "Let's start the game.",
+   "jp": "ゲームを始めましょう。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 1,
+   "audio": "/audio/ls/g01.mp3"
+  },
+  {
+   "id": "g02",
+   "en": "Discussion time starts now.",
+   "jp": "議論タイムを始めます。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g02.mp3"
+  },
+  {
+   "id": "g03",
+   "en": "Please vote now.",
+   "jp": "投票してください。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g03.mp3"
+  },
+  {
+   "id": "g04",
+   "en": "Time's almost up.",
+   "jp": "時間がもうすぐ終わります。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g04.mp3"
+  },
+  {
+   "id": "g05",
+   "en": "The game is over.",
+   "jp": "ゲーム終了です。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g05.mp3"
+  },
+  {
+   "id": "g06",
+   "en": "The Villagers win!",
+   "jp": "村人チームの勝ちです！",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g06.mp3"
+  },
+  {
+   "id": "g07",
+   "en": "The Werewolves win!",
+   "jp": "人狼チームの勝ちです！",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g07.mp3"
+  },
+  {
+   "id": "g08",
+   "en": "The Tanner wins!",
+   "jp": "吊人の勝ちです！",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g08.mp3"
+  },
+  {
+   "id": "g09",
+   "en": "Good game.",
+   "jp": "いい試合でした。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 1,
+   "audio": "/audio/ls/g09.mp3",
+   "note": "対戦後の定番あいさつ（GGと略される）"
+  },
+  {
+   "id": "g10",
+   "en": "One more game?",
+   "jp": "もう1回やりますか。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g10.mp3"
+  },
+  {
+   "id": "g11",
+   "en": "Ten seconds left.",
+   "jp": "残り10秒です。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g11.mp3"
+  },
+  {
+   "id": "g12",
+   "en": "Let's decide now.",
+   "jp": "もう決めましょう。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g12.mp3"
+  },
+  {
+   "id": "g13",
+   "en": "Night falls. Everyone, close your eyes.",
+   "jp": "夜になります。全員目を閉じてください。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g13.mp3"
+  },
+  {
+   "id": "g14",
+   "en": "It's morning. Everyone, open your eyes.",
+   "jp": "朝になりました。全員目を開けてください。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g14.mp3"
+  },
+  {
+   "id": "g15",
+   "en": "The Madman is on the werewolf team.",
+   "jp": "狂人は人狼チームです。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g15.mp3",
+   "note": "海外定番ルールではMinion"
+  },
+  {
+   "id": "g16",
+   "en": "The Tanner wants to be voted out.",
+   "jp": "吊人は投票されたい役職です。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 3,
+   "audio": "/audio/ls/g16.mp3"
+  },
+  {
+   "id": "g17",
+   "en": "Maybe there are no werewolves.",
+   "jp": "人狼はいないのかもしれません。",
+   "cat": "game",
+   "catJp": "進行・結果",
+   "tier": 2,
+   "audio": "/audio/ls/g17.mp3",
+   "note": "平和村の相談で出る"
+  }
+ ],
+ "pairs": [
+  {
+   "id": "pr01",
+   "focus": "単数か複数か",
+   "jp": "最後の s だけの差。Day2でつまずいた本命ペア。s は弱い音なので文末に集中",
+   "a": {
+    "en": "I checked the center card.",
+    "audio": "/audio/ls/pr01a.mp3"
+   },
+   "b": {
+    "en": "I checked the center cards.",
+    "audio": "/audio/ls/pr01b.mp3"
+   }
+  },
+  {
+   "id": "pr02",
+   "focus": "1枚か2枚か",
+   "jp": "a / two と、wolf→wolves（ウルフ→ウルヴズ）の変化",
+   "a": {
+    "en": "I saw a werewolf.",
+    "audio": "/audio/ls/pr02a.mp3"
+   },
+   "b": {
+    "en": "I saw two werewolves.",
+    "audio": "/audio/ls/pr02b.mp3"
+   }
+  },
+  {
+   "id": "pr03",
+   "focus": "今か過去か",
+   "jp": "claimed の -ed は「ド」と軽く付くだけ。次の S とつながって消えやすい",
+   "a": {
+    "en": "I claim Seer.",
+    "audio": "/audio/ls/pr03a.mp3"
+   },
+   "b": {
+    "en": "I claimed Seer.",
+    "audio": "/audio/ls/pr03b.mp3"
+   }
+  },
+  {
+   "id": "pr04",
+   "focus": "これからか、した後か",
+   "jp": "I'll（アイル）と voted の -ed。時制の聞き分け",
+   "a": {
+    "en": "I'll vote for Red.",
+    "audio": "/audio/ls/pr04a.mp3"
+   },
+   "b": {
+    "en": "I voted for Red.",
+    "audio": "/audio/ls/pr04b.mp3"
+   }
+  },
+  {
+   "id": "pr05",
+   "focus": "is か are か",
+   "jp": "There is / There are。後ろの単複とセットで確認",
+   "a": {
+    "en": "There is a werewolf in the center.",
+    "audio": "/audio/ls/pr05a.mp3"
+   },
+   "b": {
+    "en": "There are two werewolves in the center.",
+    "audio": "/audio/ls/pr05b.mp3"
+   }
+  },
+  {
+   "id": "pr06",
+   "focus": "can か can't か",
+   "jp": "can't の t はほぼ聞こえない。can't は「キャーント」と母音が強く、canは弱く読まれる",
+   "a": {
+    "en": "I can explain.",
+    "audio": "/audio/ls/pr06a.mp3"
+   },
+   "b": {
+    "en": "I can't explain.",
+    "audio": "/audio/ls/pr06b.mp3"
+   }
+  },
+  {
+   "id": "pr07",
+   "focus": "he か she か",
+   "jp": "h と sh の出だしの音だけの差",
+   "a": {
+    "en": "He is suspicious.",
+    "audio": "/audio/ls/pr07a.mp3"
+   },
+   "b": {
+    "en": "She is suspicious.",
+    "audio": "/audio/ls/pr07b.mp3"
+   }
+  },
+  {
+   "id": "pr08",
+   "focus": "Who か What か",
+   "jp": "疑問詞の聞き分け。答え方が変わるので実戦で重要",
+   "a": {
+    "en": "Who did you check?",
+    "audio": "/audio/ls/pr08a.mp3"
+   },
+   "b": {
+    "en": "What did you check?",
+    "audio": "/audio/ls/pr08b.mp3"
+   }
+  },
+  {
+   "id": "pr09",
+   "focus": "肯定か否定か",
+   "jp": "Don't の聞き逃しは致命的。文頭に集中",
+   "a": {
+    "en": "Vote for Red.",
+    "audio": "/audio/ls/pr09a.mp3"
+   },
+   "b": {
+    "en": "Don't vote for Red.",
+    "audio": "/audio/ls/pr09b.mp3"
+   }
+  },
+  {
+   "id": "pr10",
+   "focus": "a か the ＋ 複数か",
+   "jp": "a / the の違いと最後の s。冠詞はDay1からの課題",
+   "a": {
+    "en": "I swapped a card.",
+    "audio": "/audio/ls/pr10a.mp3"
+   },
+   "b": {
+    "en": "I swapped the cards.",
+    "audio": "/audio/ls/pr10b.mp3"
+   }
+  }
+ ]
+}
