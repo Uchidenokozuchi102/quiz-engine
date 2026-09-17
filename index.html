@@ -407,6 +407,7 @@
             'en-b': 'english-b-2026-06.json',
             'en-c': 'english-c-2026-06.json',
             'hi': 'history-2026-06.json',
+            'hi2': 'history-2026-09.json',
             'bn': 'bunkashi-2026-06.json',
             'ph': 'philosophy-2026-05.json',
             'toyotsu': 'toyotsu-2nd-final.json',
@@ -414,7 +415,7 @@
             'english': 'english-2026-05.json',
             'philosophy': 'philosophy-2026-05.json'
         };
-        const QUIZ_VERSION = '11'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
+        const QUIZ_VERSION = '12'; // クイズ更新時に+1（全クイズ共通キャッシュバスター）
         const params = new URLSearchParams(location.search);
         let dataFile = params.get('data');
         if (!dataFile) {
@@ -429,6 +430,7 @@
             'english-b-2026-06.json': 'en-b',
             'english-c-2026-06.json': 'en-c',
             'history-2026-06.json': 'hi',
+            'history-2026-09.json': 'hi2',
             'bunkashi-2026-06.json': 'bn',
         };
         const _qdata = params.get('data');
